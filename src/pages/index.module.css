@@ -1,0 +1,334 @@
+/**
+ * Futuristic CSS Design for OpenCMS Homepage
+ */
+
+.futuristicHeader {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* Animated background */
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(58, 123, 213, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(0, 191, 255, 0.15) 0%, transparent 50%);
+  animation: gradientShift 8s ease infinite;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Floating animated boxes */
+.floatingElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floatingBox1,
+.floatingBox2,
+.floatingBox3 {
+  position: absolute;
+  border: 2px solid rgba(58, 123, 213, 0.3);
+  border-radius: 20px;
+  animation: float 15s infinite ease-in-out;
+}
+
+.floatingBox1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.floatingBox2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.floatingBox3 {
+  width: 250px;
+  height: 250px;
+  top: 30%;
+  right: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+/* Header content */
+.headerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo */
+.logoContainer {
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.logo {
+  max-width: 85vw;
+  width: 520px;
+  height: auto;
+  margin: 0 auto 24px;
+  filter: drop-shadow(0 0 20px rgba(58, 123, 213, 0.5));
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Main title */
+.mainTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00bfff, #7b68ee, #ff1493);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 30px rgba(58, 123, 213, 0.4);
+  letter-spacing: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem;
+  color: #00bfff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Divider */
+.divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #7b68ee, transparent);
+  margin: 30px auto;
+}
+
+/* Description */
+.description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Feature grid */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.featureCard {
+  background: rgba(58, 123, 213, 0.1);
+  border: 2px solid rgba(58, 123, 213, 0.3);
+  border-radius: 15px;
+  padding: 30px 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.featureCard:hover {
+  background: rgba(58, 123, 213, 0.2);
+  border-color: #7b68ee;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(58, 123, 213, 0.3);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.featureCard h3 {
+  color: #00bfff;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.featureCard p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* CTA Buttons */
+.ctaContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.ctaButton,
+.ctaButtonSecondary {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #00bfff, #7b68ee);
+  color: white;
+  border-color: #00bfff;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.8);
+  background: linear-gradient(135deg, #7b68ee, #00bfff);
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: #00bfff;
+  border-color: #00bfff;
+}
+
+.ctaButtonSecondary:hover {
+  background: rgba(0, 191, 255, 0.1);
+  border-color: #7b68ee;
+  color: #7b68ee;
+}
+
+/* Hero image */
+.imageContainer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid rgba(58, 123, 213, 0.4);
+  box-shadow: 0 20px 60px rgba(58, 123, 213, 0.3);
+  animation: imageFloat 4s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .futuristicHeader {
+    min-height: auto;
+    padding: 30px 15px;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ctaContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .floatingBox1,
+  .floatingBox2,
+  .floatingBox3 {
+    opacity: 0.3;
+  }
+}
