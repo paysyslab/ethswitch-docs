@@ -3,15 +3,17 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Open CMS',
-  tagline: 'Enterprise Card Management System',
+  title: 'ETHSwitch',
+  tagline: 'EthSwitch is Ethiopia\'s national payment switch enabling secure, interoperable, and real-time digital payments across the domestic banking ecosystem.',
   favicon: 'img/favicon.png',
 
-  // GitHub Pages config (repo: uneebae/opencms-api-specs)
+  // GitHub Pages config - UPDATED FOR UNEEBAE REPO
   url: 'https://uneebae.github.io',
-  baseUrl: '/opencms-api-specs/',
+  baseUrl: '/ethswitch-docs/',
   organizationName: 'uneebae',
-  projectName: 'opencms-api-specs',
+  projectName: 'ethswitch-docs',
+  
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
@@ -33,11 +35,8 @@ const config = {
       {
         docs: {
           sidebarPath: './sidebars.js',
-
-          // Docs as homepage
           routeBasePath: '/',
-
-          editUrl: 'https://github.com/uneebae/opencms-api-specs/tree/UNEEB2/',
+          editUrl: 'https://github.com/uneebae/ethswitch-docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -51,28 +50,23 @@ const config = {
     [
       '@scalar/docusaurus',
       {
-        id: 'openCMS',
+        id: 'ethswitch',
         label: 'API Specifications',
         route: '/api-specifications',
         showNavLink: false,
         configuration: {
-          // ✅ file is located in: static/openapi/OpenCMS-3.3.yml
-          url: 'openapi/OpenCMS-3.3.yml',
-
+          url: '/openapi/ETS-api.yml',
           layout: 'modern',
           theme: 'default',
           darkMode: true,
           defaultOpenAllTags: false,
-
           hideModels: false,
           hideTestRequestButton: false,
           hideSearch: false,
           hideDarkModeToggle: false,
-
-          // Branding
           hideLogo: false,
           branding: {
-            title: 'Open CMS API',
+            title: 'ETHSWITCH API',
             logo: '/img/PaysysLogo.png',
             favicon: '/img/favicon.png',
           },
@@ -82,7 +76,7 @@ const config = {
   ],
 
   themeConfig: {
-    image: 'img/OpenCMS.png',
+    image: 'img/PaysysLogo.png',
 
     colorMode: {
       defaultMode: 'dark',
@@ -93,14 +87,15 @@ const config = {
     navbar: {
       logo: {
         alt: 'Paysys Labs Logo',
-        src: '/img/PaysysLogo.png',
+        src: 'img/PaysysLogo.png',
         href: '/',
       },
       items: [
         { to: '/', label: 'Overview', position: 'left' },
-        { to: '/api-specifications', label: 'API Specifications', position: 'left' },
-        { type: 'doc', docId: 'backOffice', label: 'Back Office', position: 'left' },
-        { href: 'https://github.com/uneebae/opencms-api-specs', label: 'GitHub', position: 'right' },
+        { to: '/api-specifications', label: 'API Specification', position: 'left' },
+        { to: '/backoffice-ethswitch', label: 'Enterprise Portal Back Office', position: 'left' },
+        { to: '/BankPortal-Backoffice', label: 'Bank Portal Back Office', position: 'left' },
+        { href: 'https://github.com/uneebae/ethswitch-docs', label: 'GitHub', position: 'right' },
       ],
     },
 
@@ -110,17 +105,16 @@ const config = {
         {
           title: 'Documentation',
           items: [
-            { label: 'Getting Started', to: '/introduction' },
-            { label: 'API Reference', to: '/api-specifications' },
-            { label: 'Developer Workflow', to: '/developerWorkflow' },
+            { label: 'Introduction', to: '/intro-ethswitch' },
+            { label: 'API Specification', to: '/api-specifications' },
+            { label: 'Back Office', to: '/backoffice-ethswitch' },
+            { label: 'Bank Portal', to: '/BankPortal-Backoffice' },
           ],
         },
         {
-          title: 'Resources',
+          title: 'API',
           items: [
-            { label: 'Back Office', to: '/backOffice' },
-            { label: 'Data Types', to: '/dataTypeRef' },
-            { label: 'Response Codes', to: '/response' },
+            { label: 'API Reference (OpenAPI)', to: '/api-specifications' },
           ],
         },
         {

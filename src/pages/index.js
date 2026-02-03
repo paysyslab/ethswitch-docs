@@ -1,56 +1,57 @@
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import styles from './index.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
+import styles from './index.module.css';
 
 function HomepageHeader() {
-  return (
-    <header className={styles.futuristicHeader}>
-      <div className={styles.backgroundAnimation}>
-        
-      </div>
-      <div className={styles.headerContent}>
-        <img
-          src="/opencms-api-specs/img/OpenCMS.png"
-          alt="Open CMS Logo"
-          className={styles.logo}
-        />
+  return (
+    <header className={styles.futuristicHeader}>
+      {/* Background animation layer */}
+      <div className={styles.backgroundAnimation} />
 
-        <Heading as="h1" className={styles.mainTitle}>
-          Open CMS
-        </Heading>
+      <div className={styles.headerContent}>
+        <img
+          src={useBaseUrl('/img/ethswitch.png')}
+          alt="ethswitch"
+          className={styles.headerImage}
+        />
 
-        <p className={styles.subtitle}>
-          Enterprise Card Management System
-        </p>
+        <Heading as="h1" className={styles.mainTitle}>
+          ETHSWITCH
+        </Heading>
 
-        <div className={styles.ctaContainer}>
-          <Link className={styles.ctaButton} to="/introduction">
-            Get Started
-          </Link>
+        <p className={styles.subtitle}>
+          Driving Financial Inclusion through Interoperable Digital Infrastructure
+        </p>
 
-          <Link className={styles.ctaButtonSecondary} to="/api-specifications">
-            API Reference
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+        <div className={styles.ctaContainer}>
+          <Link className={styles.ctaButton} to="/intro-ethswitch">
+            Get Started
+          </Link>
+
+          <Link
+            className={styles.ctaButtonSecondary}
+            to="/api-specifications"
+          >
+            API Reference
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
 }
 
-export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+export default function HomePage() {
+  const { siteConfig } = useDocusaurusContext();
 
-  return (
-    <Layout
-      title={siteConfig.title}
-      description="Enterprise-grade Card Lifecycle Management Platform"
-    >
-      <HomepageHeader />
-    </Layout>
-  );
+  return (
+    <Layout
+      title={siteConfig.title}
+      description="Ethswitch is Ethiopia's national payment switch, owned by all domestic banks and dedicated to modernizing the financial system through secure, interoperable e-payment infrastructure."
+    >
+      <HomepageHeader />
+    </Layout>
+  );
 }
