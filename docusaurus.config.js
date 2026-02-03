@@ -110,7 +110,6 @@ const config = {
           items: [
             { label: 'Introduction', to: '/intro-ethswitch' },
             { label: 'API Specification', to: '/api-specifications' },
-            { label: 'API Reference', to: '/api-reference' },
             { label: 'Back Office', to: '/backoffice-ethswitch' },
             { label: 'Bank Portal', to: '/BankPortal-Backoffice' },
           ],
