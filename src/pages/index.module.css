@@ -331,4 +331,139 @@
   .floatingBox3 {
     opacity: 0.3;
   }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quickLinksGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stats Section */
+.statsSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #fff, #e0e8ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-10px);
+}
+
+.statIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Quick Links Section */
+.quickLinksSection {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+[data-theme='dark'] .quickLinksSection {
+  background: #1a202c;
+}
+
+.quickLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.quickLinkCard {
+  padding: 2rem;
+  border-radius: 15px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .quickLinkCard {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.quickLinkCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.quickLinkCard h3 {
+  margin-bottom: 1rem;
+  color: #667eea;
+}
+
+.quickLinkCard p {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .quickLinkCard p {
+  color: #a0aec0;
+}
+
+.linkArrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #667eea;
+  transition: transform 0.3s ease;
+}
+
+.quickLinkCard:hover .linkArrow {
+  transform: translateX(5px);
 }

@@ -20,7 +20,7 @@ const config = {
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
-      onBrokenMarkdownImages: 'warn',
+      onBrokenMarkdownImages: 'ignore',
     },
   },
 
@@ -55,7 +55,9 @@ const config = {
         route: '/api-specifications',
         showNavLink: false,
         configuration: {
-          url: '/openapi/ETS-api.yml',
+          spec: {
+            url: './openapi/ETS-api.yml',
+          },
           layout: 'modern',
           theme: 'default',
           darkMode: true,
@@ -65,6 +67,7 @@ const config = {
           hideSearch: false,
           hideDarkModeToggle: false,
           hideLogo: false,
+          withCredentials: false,
           branding: {
             title: 'ETHSWITCH API',
             logo: '/img/PaysysLogo.png',
@@ -107,6 +110,7 @@ const config = {
           items: [
             { label: 'Introduction', to: '/intro-ethswitch' },
             { label: 'API Specification', to: '/api-specifications' },
+            { label: 'API Reference', to: '/api-reference' },
             { label: 'Back Office', to: '/backoffice-ethswitch' },
             { label: 'Bank Portal', to: '/BankPortal-Backoffice' },
           ],

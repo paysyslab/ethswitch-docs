@@ -4,42 +4,42 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Secure & Reliable',
+    icon: '🔒',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Built with enterprise-grade security standards ensuring safe and reliable 
+        payment processing across Ethiopia's banking ecosystem with 99.9% uptime.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Real-time Processing',
+    icon: '⚡',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Lightning-fast transaction processing with real-time settlement capabilities,
+        enabling instant payments between financial institutions nationwide.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Interoperable Platform',
+    icon: '🌐',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Seamlessly connects all domestic banks and financial institutions through
+        standardized APIs, fostering financial inclusion and digital transformation.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.featureIcon}>{icon}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -53,6 +53,10 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center">
+          <h2>Why Choose ETHSwitch?</h2>
+          <p>Built for Ethiopia's financial ecosystem with cutting-edge technology</p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
@@ -60,57 +64,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
-}
-
-function HomepageHeader() {
-  return (
-    <header className={styles.futuristicHeader}>
-      {/* Background animation layer */}
-      <div className={styles.backgroundAnimation} />
-
-      <div className={styles.headerContent}>
-        <img
-          src={useBaseUrl('/img/OpenConnect.png')}
-          alt="OpenConnect"
-          className={styles.headerImage}
-        />
-
-        <Heading as="h1" className={styles.mainTitle}>
-          OpenConnect
-        </Heading>
-
-        <p className={styles.subtitle}>
-          Enterprise Integration Middleware for Real-Time Payments
-        </p>
-
-        <div className={styles.ctaContainer}>
-          <Link className={styles.ctaButton} to="/introduction">
-            Get Started
-          </Link>
-
-          <Link
-            className={styles.ctaButtonSecondary}
-            to="/api-specifications"
-          >
-            API Reference
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
-
-  return (
-    <Layout
-      title={siteConfig.title}
-      description="Enterprise-grade middleware for P2P, P2M, IBFT, Billing, and Title Fetch integrations"
-    >
-      <HomepageHeader />
-      <HomepageFeatures />
-    </Layout>
   );
 }

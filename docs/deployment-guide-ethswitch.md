@@ -120,7 +120,7 @@ npm -v
 
 ```bash
 # Clone the EthSwitch repository
-git clone https://github.com/paysyslabs/ethswitch.git
+git clone https://github.com/uneebae/ethswitch-docs.git
 cd ethswitch
 
 # Checkout production branch

@@ -25,7 +25,7 @@ The EthBridge Bank Portal Back Office is a comprehensive administrative interfac
 
 The Dashboard provides a comprehensive overview of your banking operations and transactions with real-time metrics and visual analytics.
 
-![Dashboard Interface](./img/EBP-Dashboard.png)
+![Dashboard Interface](/img/EBP-Dashboard.png)
 
 ### Dashboard Data
 
@@ -123,7 +123,7 @@ The dashboard displays updated information with the timestamp showing "Dashboard
 
 The User Management module provides comprehensive user administration capabilities including user creation, modification, deletion, and status management.
 
-![User Management Interface](./img/EBP-UserManagement.png)
+![User Management Interface](/img/EBP-UserManagement.png)
 
 ### Features
 
@@ -199,7 +199,7 @@ The User Management module provides comprehensive user administration capabiliti
 
 The Role Management module allows administrators to define and manage user roles with granular permission control.
 
-![Role Management Interface](./img/EBP-RoleManagement.png)
+![Role Management Interface](/img/EBP-RoleManagement.png)
 
 ### Features
 
@@ -293,7 +293,7 @@ Permissions are organized by resource and action:
 
 ### Transaction Monitoring
 
-![Transaction Monitoring Interface](./img/EBP-TransactionMonitoring.png)
+![Transaction Monitoring Interface](/img/EBP-TransactionMonitoring.png)
 
 #### Features
 
@@ -336,7 +336,7 @@ Permissions are organized by resource and action:
 
 ### Transaction Search
 
-![Transaction Search Interface](./img/EBP-TransactionSearch.png)
+![Transaction Search Interface](/img/EBP-TransactionSearch.png)
 
 Advanced search functionality for finding specific transactions.
 
@@ -361,7 +361,7 @@ Advanced search functionality for finding specific transactions.
 
 ### Bulk Sending
 
-![Bulk Sending Interface](./img/EBP-BulkSending.png)
+![Bulk Sending Interface](/img/EBP-BulkSending.png)
 
 The Bulk Sending feature allows users to upload and process batch payment files.
 
@@ -401,7 +401,7 @@ Currently: "No batch payments found matching your criteria"
 
 ### Bulk Receiving
 
-![Bulk Receiving Interface](./img/EBP-BulkReceiving.png)
+![Bulk Receiving Interface](/img/EBP-BulkReceiving.png)
 
 Monitor and manage incoming bulk payments from other banks.
 
@@ -430,7 +430,7 @@ Monitor and manage incoming bulk payments from other banks.
 
 ### Transaction Report
 
-![Transaction Report Interface](./img/EBP-TransactionReport.png)
+![Transaction Report Interface](/img/EBP-TransactionReport.png)
 
 Generate comprehensive transaction reports with customizable filters.
 
@@ -458,7 +458,7 @@ Generate comprehensive transaction reports with customizable filters.
 
 ### Transaction Summary Report
 
-![Transaction Summary Report Interface](./img/EBP-TransactionSummaryReport.png)
+![Transaction Summary Report Interface](/img/EBP-TransactionSummaryReport.png)
 
 Generate aggregate transaction statistics.
 
@@ -484,7 +484,7 @@ Generate aggregate transaction statistics.
 
 ### User List Report
 
-![User List Report Interface](./img/EBP-UserListReport.png)
+![User List Report Interface](/img/EBP-UserListReport.png)
 
 Generate reports on user accounts and activity.
 
@@ -514,7 +514,7 @@ Generate reports on user accounts and activity.
 
 ### User Activity Audit Log
 
-![User Activity Audit Log Interface](./img/EBP-UserActivityAuditLog.png)
+![User Activity Audit Log Interface](/img/EBP-UserActivityAuditLog.png)
 
 Track all user actions within the system.
 
@@ -557,7 +557,7 @@ Track all user actions within the system.
 
 ### API Audit Log
 
-![API Audit Log Interface](./img/EBP-APIAuditLog.png)
+![API Audit Log Interface](/img/EBP-APIAuditLog.png)
 
 Comprehensive tracking of all API activity for security monitoring and compliance.
 
@@ -595,7 +595,7 @@ Comprehensive tracking of all API activity for security monitoring and complianc
 
 ### Certificate Management
 
-![Certificate Management Interface](./img/EBP-CertificateManagement.png)
+![Certificate Management Interface](/img/EBP-CertificateManagement.png)
 
 Manage SSL/TLS certificates for secure communication between system participants.
 
@@ -654,7 +654,7 @@ Manage SSL/TLS certificates for secure communication between system participants
 
 ### System Settings
 
-![System Configurations Interface](./img/EBP-Configurations.png)
+![System Configurations Interface](/img/EBP-Configurations.png)
 
 Manage system-wide configuration for security, timeouts, and authentication.
 

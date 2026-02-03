@@ -43,7 +43,7 @@ The following table describes the predefined roles available within the system:
 
 The Role Management interface provides a centralized location for administering all system roles:
 
-![Role Management Interface](./img/EEP-RoleManagement.png)
+![Role Management Interface](/img/EEP-RoleManagement.png)
 
 *Figure 1: Role Management Interface showing all available roles with their associated permissions and status indicators*
 
@@ -75,7 +75,7 @@ Each user account maintains the following key attributes:
 
 The comprehensive User Management interface provides tools for user administration and lifecycle management:
 
-![User Management Interface](./img/EEP-UserManagement.png)
+![User Management Interface](/img/EEP-UserManagement.png)
 
 *Figure 2: User Management Interface displaying active users with their roles, status, and administrative controls*
 
@@ -127,7 +127,7 @@ Participants are categorized into three primary types based on their operational
 
 The Participants Management interface enables comprehensive administration of all network participants:
 
-![Participants Management Interface](./img/EEP-ParticipantList.png)
+![Participants Management Interface](/img/EEP-ParticipantList.png)
 
 *Figure 3: Participants Management Interface showing the complete list of participating institutions with their details, BIC codes, and operational status*
 
@@ -189,7 +189,7 @@ Configure authentication mechanisms and multi-factor authentication settings:
 
 The System Configuration interface provides centralized access to all operational and security settings:
 
-![System Configuration Interface](./img/EEP-Configurations.png)
+![System Configuration Interface](/img/EEP-Configurations.png)
 
 *Figure 4: System Configuration Interface displaying all timeout, security, and authentication settings with current values and configuration options*
 #### Configuration Sections Overview
@@ -220,7 +220,7 @@ Administrators must maintain comprehensive oversight and vigilant monitoring of 
 
 The Back Office Dashboard provides comprehensive visibility into system administration activities and operational metrics:
 
-![Back Office Dashboard Overview](./img/EEP-BackOfficeDashboard.png)
+![Back Office Dashboard Overview](/img/EEP-BackOfficeDashboard.png)
 
 *Figure 5: Back Office Administration Dashboard displaying key administrative metrics, recent activities, and system health indicators*
 
@@ -253,7 +253,7 @@ The administrative dashboard includes the following key components:
 
 The API Audit Log provides comprehensive logging of all API-level transactions for compliance and technical auditing purposes:
 
-![API Audit Log Interface](./img/EEP-APIAuditLog.png)
+![API Audit Log Interface](/img/EEP-APIAuditLog.png)
 
 *Figure 6: API Audit Log Interface showing API audit search filters and transaction logging parameters*
 
@@ -268,7 +268,7 @@ The API Audit Log provides comprehensive logging of all API-level transactions f
 
 The User Activity Audit Log monitors all user actions within the system:
 
-![User Activity Audit Log Interface](./img/EEP-UserActivityAuditLog.png)
+![User Activity Audit Log Interface](/img/EEP-UserActivityAuditLog.png)
 
 *Figure 7: User Activity Audit Log Interface displaying user action tracking and audit filtering options*
 
@@ -280,7 +280,7 @@ The User Activity Audit Log monitors all user actions within the system:
 
 Real-time transaction monitoring with live status updates:
 
-![Transaction Monitoring Interface](./img/EEP-TransactionMonitoring.png)
+![Transaction Monitoring Interface](/img/EEP-TransactionMonitoring.png)
 
 *Figure 8: Transaction Monitoring Interface showing live transaction data with sender, receiver, and amount information*
 
@@ -299,7 +299,7 @@ Real-time transaction monitoring with live status updates:
 
 Detailed transaction-level reporting with advanced filtering capabilities:
 
-![Transaction Report Interface](./img/EEP-TransactionReport.png)
+![Transaction Report Interface](/img/EEP-TransactionReport.png)
 
 *Figure 9: Transaction Report Interface showing report generation filters and parameters*
 
@@ -315,7 +315,7 @@ Detailed transaction-level reporting with advanced filtering capabilities:
 
 Advanced search functionality for locating specific transactions:
 
-![Transaction Search Interface](./img/EEP-TransactionSearch.png)
+![Transaction Search Interface](/img/EEP-TransactionSearch.png)
 
 *Figure 10: Transaction Search Interface providing multi-parameter transaction search capabilities*
 
@@ -335,7 +335,7 @@ Advanced search functionality for locating specific transactions:
 
 Executive-level overview of transaction activities:
 
-![Transaction Summary Report Interface](./img/EEP-TransactionSummaryReport.png)
+![Transaction Summary Report Interface](/img/EEP-TransactionSummaryReport.png)
 
 *Figure 11: Transaction Summary Report Interface showing aggregated transaction metrics and summary parameters*
 
@@ -350,7 +350,7 @@ Executive-level overview of transaction activities:
 
 User management and audit reporting interface:
 
-![User List Report Interface](./img/EEP-UserListReport.png)
+![User List Report Interface](/img/EEP-UserListReport.png)
 
 *Figure 12: User List Report Interface displaying user management reporting options and filters*
 
