@@ -7,10 +7,10 @@ const config = {
   tagline: 'EthSwitch is Ethiopia\'s national payment switch enabling secure, interoperable, and real-time digital payments across the domestic banking ecosystem.',
   favicon: 'img/favicon.png',
 
-  // GitHub Pages config - UPDATED FOR UNEEBAE REPO
-  url: 'https://uneebae.github.io',
+  // GitHub Pages config - UPDATED FOR PAYSYSLAB REPO
+  url: 'https://paysyslab.github.io',
   baseUrl: '/ethswitch-docs/',
-  organizationName: 'uneebae',
+  organizationName: 'paysyslab',
   projectName: 'ethswitch-docs',
   
   trailingSlash: false,
@@ -36,7 +36,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
-          editUrl: 'https://github.com/uneebae/ethswitch-docs/tree/main/',
+          editUrl: 'https://github.com/paysyslab/ethswitch-docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -98,7 +98,7 @@ const config = {
         { to: '/api-specifications', label: 'API Specification', position: 'left' },
         { to: '/backoffice-ethswitch', label: 'Enterprise Portal Back Office', position: 'left' },
         { to: '/BankPortal-Backoffice', label: 'Bank Portal Back Office', position: 'left' },
-        { href: 'https://github.com/uneebae/ethswitch-docs', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/paysyslab/ethswitch-docs', label: 'GitHub', position: 'right' },
       ],
     },
 
