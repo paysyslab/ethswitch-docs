@@ -56,7 +56,7 @@ const config = {
         showNavLink: false,
         configuration: {
           spec: {
-            url: '/openapi/ETS-api.yml',
+            url: '/ethswitch-docs/openapi/ETS-api.yml',
           },
           layout: 'modern',
           theme: 'default',
@@ -70,8 +70,8 @@ const config = {
           withCredentials: false,
           branding: {
             title: 'ETHSWITCH API',
-            logo: '/img/PaysysLogo.png',
-            favicon: '/img/favicon.png',
+            logo: '/ethswitch-docs/img/PaysysLogo.png',
+            favicon: '/ethswitch-docs/img/favicon.png',
           },
         },
       },
