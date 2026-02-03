@@ -56,7 +56,7 @@ const config = {
         showNavLink: false,
         configuration: {
           spec: {
-            url: './openapi/ETS-api.yml',
+            url: '/openapi/ETS-api.yml',
           },
           layout: 'modern',
           theme: 'default',
