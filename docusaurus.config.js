@@ -7,7 +7,7 @@ const config = {
   tagline: 'EthSwitch is Ethiopia\'s national payment switch enabling secure, interoperable, and real-time digital payments across the domestic banking ecosystem.',
   favicon: 'img/favicon.png',
 
-  // GitHub Pages config - UPDATED FOR PAYSYSLAB REPO
+  // GitHub Pages config - UPDATED FOR UNEEBAE REPO
   url: 'https://paysyslab.github.io',
   baseUrl: '/ethswitch-docs/',
   organizationName: 'paysyslab',
