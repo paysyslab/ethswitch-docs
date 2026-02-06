@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-test-p2p-outward-ethswitch" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">P2P Outward Transaction Test Scenarios | ETHSwitch</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://paysyslab.github.io/ethswitch-docs/img/PaysysLogo.png"><meta data-rh="true" name="twitter:image" content="https://paysyslab.github.io/ethswitch-docs/img/PaysysLogo.png"><meta data-rh="true" property="og:url" content="https://paysyslab.github.io/ethswitch-docs/test-p2p-outward-ethswitch"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="P2P Outward Transaction Test Scenarios | ETHSwitch"><meta data-rh="true" name="description" content="Version: 2.0"><meta data-rh="true" property="og:description" content="Version: 2.0"><link data-rh="true" rel="icon" href="/ethswitch-docs/img/favicon.png"><link data-rh="true" rel="canonical" href="https://paysyslab.github.io/ethswitch-docs/test-p2p-outward-ethswitch"><link data-rh="true" rel="alternate" href="https://paysyslab.github.io/ethswitch-docs/test-p2p-outward-ethswitch" hreflang="en"><link data-rh="true" rel="alternate" href="https://paysyslab.github.io/ethswitch-docs/test-p2p-outward-ethswitch" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"P2P Outward Transaction Test Scenarios","item":"https://paysyslab.github.io/ethswitch-docs/test-p2p-outward-ethswitch"}]}</script><link rel="stylesheet" href="/ethswitch-docs/assets/css/styles.e39039b7.css">
+<script src="/ethswitch-docs/assets/js/runtime~main.ef176dd5.js" defer="defer"></script>
+<script src="/ethswitch-docs/assets/js/main.e990836d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script><div id="__docusaurus"><link rel="preload" as="image" href="/ethswitch-docs/img/eslogo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ethswitch-docs/"><div class="navbar__logo"><img src="/ethswitch-docs/img/eslogo.png" alt="ETHSwitch Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/ethswitch-docs/img/eslogo.png" alt="ETHSwitch Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ethswitch-docs/">Overview</a><a class="navbar__item navbar__link" href="/ethswitch-docs/api-specifications">API Specification</a><a class="navbar__item navbar__link" href="/ethswitch-docs/backoffice-ethswitch">Enterprise Portal Back Office</a><a class="navbar__item navbar__link" href="/ethswitch-docs/BankPortal-Backoffice">Bank Portal Back Office</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/paysyslab/ethswitch-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/intro-ethswitch"><span title="EthBridge Enterprise Portal - Introduction" class="linkLabel_WmDU">EthBridge Enterprise Portal - Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/productfeature-ethswitch"><span title="EthBridge Enterprise Portal - Product Features Documentation" class="linkLabel_WmDU">EthBridge Enterprise Portal - Product Features Documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/technical-spec-ethswitch"><span title="Technical Specification Document" class="linkLabel_WmDU">Technical Specification Document</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/functional-spec-ethswitch"><span title="Functional Specification Document (FSD)" class="linkLabel_WmDU">Functional Specification Document (FSD)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/fsd-bulk-payments-ethswitch"><span title="Functional Specification - Bulk Payments (EthSwitch)" class="linkLabel_WmDU">Functional Specification - Bulk Payments (EthSwitch)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/deployment-guide-ethswitch"><span title="EthSwitch Deployment Guide" class="linkLabel_WmDU">EthSwitch Deployment Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/operational-guide-ethswitch"><span title="EthBridge Operational Guide" class="linkLabel_WmDU">EthBridge Operational Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/backoffice-ethswitch"><span title="EthBridge Enterprise Portal - Back Office" class="linkLabel_WmDU">EthBridge Enterprise Portal - Back Office</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/test-p2p-inward-ethswitch"><span title="P2P Inward Transaction Test Scenarios" class="linkLabel_WmDU">P2P Inward Transaction Test Scenarios</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ethswitch-docs/test-p2p-outward-ethswitch"><span title="P2P Outward Transaction Test Scenarios" class="linkLabel_WmDU">P2P Outward Transaction Test Scenarios</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/BankPortal-Backoffice"><span title="EthBridge Bank Portal - Back Office" class="linkLabel_WmDU">EthBridge Bank Portal - Back Office</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ethswitch-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">P2P Outward Transaction Test Scenarios</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>P2P Outward Transaction Test Scenarios</h1></header>
+<p><strong>Version</strong>: 2.0<br>
+<strong>Last Updated</strong>: January 30, 2026<br>
+<strong>Provider</strong>: PaySys Labs<br>
+<strong>Test Module</strong>: Peer-to-Peer Outward Transactions
+<strong>Document Type</strong>: Test Case Specifications and Scenarios</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="table-of-contents">Table of Contents<a href="#table-of-contents" class="hash-link" aria-label="Direct link to Table of Contents" title="Direct link to Table of Contents" translate="no">​</a></h2>
+<ol>
+<li class=""><a href="#overview" class="">Overview</a></li>
+<li class=""><a href="#test-environment-setup" class="">Test Environment Setup</a></li>
+<li class=""><a href="#test-data-preparation" class="">Test Data Preparation</a></li>
+<li class=""><a href="#functional-test-scenarios" class="">Functional Test Scenarios</a></li>
+<li class=""><a href="#edge-case-test-scenarios" class="">Edge Case Test Scenarios</a></li>
+<li class=""><a href="#negative-test-scenarios" class="">Negative Test Scenarios</a></li>
+<li class=""><a href="#security-test-scenarios" class="">Security Test Scenarios</a></li>
+<li class=""><a href="#performance-test-scenarios" class="">Performance Test Scenarios</a></li>
+<li class=""><a href="#integration-test-scenarios" class="">Integration Test Scenarios</a></li>
+<li class=""><a href="#acceptance-criteria" class="">Acceptance Criteria</a></li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="purpose">Purpose<a href="#purpose" class="hash-link" aria-label="Direct link to Purpose" title="Direct link to Purpose" translate="no">​</a></h3>
+<p>This document defines comprehensive test scenarios for P2P (Peer-to-Peer) Outward Transactions in the EthSwitch platform. Outward transactions represent funds sent by the user to external recipients.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scope">Scope<a href="#scope" class="hash-link" aria-label="Direct link to Scope" title="Direct link to Scope" translate="no">​</a></h3>
+<ul>
+<li class="">Standard P2P outward transfer processing</li>
+<li class="">Transaction validation and verification</li>
+<li class="">Recipient management and verification</li>
+<li class="">Transaction approval workflows</li>
+<li class="">Status tracking and notifications</li>
+<li class="">Audit logging and reconciliation</li>
+<li class="">Fee deductions and calculations</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-approach">Testing Approach<a href="#testing-approach" class="hash-link" aria-label="Direct link to Testing Approach" title="Direct link to Testing Approach" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Positive Testing</strong>: Happy path scenarios</li>
+<li class=""><strong>Negative Testing</strong>: Error handling and rejection scenarios</li>
+<li class=""><strong>Edge Case Testing</strong>: Boundary condition testing</li>
+<li class=""><strong>Security Testing</strong>: Authorization and fraud prevention</li>
+<li class=""><strong>Performance Testing</strong>: Load and stress testing</li>
+<li class=""><strong>Integration Testing</strong>: External system interactions</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-environment-setup">Test Environment Setup<a href="#test-environment-setup" class="hash-link" aria-label="Direct link to Test Environment Setup" title="Direct link to Test Environment Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="environment-requirements">Environment Requirements<a href="#environment-requirements" class="hash-link" aria-label="Direct link to Environment Requirements" title="Direct link to Environment Requirements" translate="no">​</a></h3>
+<table><thead><tr><th>Component</th><th>Specification</th><th>Version</th></tr></thead><tbody><tr><td><strong>API Server</strong></td><td>EthSwitch API Gateway</td><td>v2.0</td></tr><tr><td><strong>Database</strong></td><td>PostgreSQL</td><td>12+</td></tr><tr><td><strong>Cache</strong></td><td>Redis</td><td>6+</td></tr><tr><td><strong>Test Framework</strong></td><td>Jest/Mocha</td><td>Latest</td></tr><tr><td><strong>API Client</strong></td><td>Postman/Insomnia</td><td>Latest</td></tr><tr><td><strong>Network</strong></td><td>Dedicated test VPC</td><td>N/A</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-user-accounts">Test User Accounts<a href="#test-user-accounts" class="hash-link" aria-label="Direct link to Test User Accounts" title="Direct link to Test User Accounts" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test Admin:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Email: admin@test.ethswitch.example.com</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Password: TestAdmin123!@</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Role: Administrator</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test User 1 (Sender):</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Email: sender@test.ethswitch.example.com</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Password: TestUser123!@</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Role: User</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Account Balance: $10,000.00</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test User 2 (Receiver):</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Email: receiver@test.ethswitch.example.com</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Password: TestUser123!@</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Role: User</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Account Balance: $5,000.00</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test User 3 (New Recipient):</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Email: newrecipient@test.ethswitch.example.com</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Password: TestUser123!@</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Role: User</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Account Balance: $0.00</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-fee-configuration">Transaction Fee Configuration<a href="#transaction-fee-configuration" class="hash-link" aria-label="Direct link to Transaction Fee Configuration" title="Direct link to Transaction Fee Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;base_fee_percent&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">0.5</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;base_fee_fixed&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">0.50</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;minimum_fee&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">0.50</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;maximum_fee&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">250.00</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;fee_cap_threshold&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">5000.00</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-data-preparation">Test Data Preparation<a href="#test-data-preparation" class="hash-link" aria-label="Direct link to Test Data Preparation" title="Direct link to Test Data Preparation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sample-transaction-data">Sample Transaction Data<a href="#sample-transaction-data" class="hash-link" aria-label="Direct link to Sample Transaction Data" title="Direct link to Sample Transaction Data" translate="no">​</a></h3>
+<table><thead><tr><th>Field</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Sender</strong></td><td>sender@test</td><td>Valid sender user</td></tr><tr><td><strong>Recipient</strong></td><td>recipient@test</td><td>Valid recipient</td></tr><tr><td><strong>Amount</strong></td><td>$1,000.00</td><td>Standard amount</td></tr><tr><td><strong>Currency</strong></td><td>USD</td><td>Primary currency</td></tr><tr><td><strong>Description</strong></td><td>Test outward payment</td><td>Optional field</td></tr><tr><td><strong>Schedule</strong></td><td>Immediate</td><td>Processing option</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-recipients-setup">Test Recipients Setup<a href="#test-recipients-setup" class="hash-link" aria-label="Direct link to Test Recipients Setup" title="Direct link to Test Recipients Setup" translate="no">​</a></h3>
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> testRecipients </span><span class="token operator">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;recipient-1&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;Test Recipient 1&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">email</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;recipient1@test.example.com&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">accountNumber</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;ACC-RECV-001&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">status</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;verified&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;recipient-2&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;Test Recipient 2&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">email</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;recipient2@test.example.com&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">accountNumber</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;ACC-RECV-002&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">status</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;pending_verification&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;recipient-3&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;Test Recipient 3&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">email</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;recipient3@test.example.com&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">accountNumber</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;ACC-RECV-003&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">status</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;blocked&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-account-setup">Test Account Setup<a href="#test-account-setup" class="hash-link" aria-label="Direct link to Test Account Setup" title="Direct link to Test Account Setup" translate="no">​</a></h3>
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> testAccounts </span><span class="token operator">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;account-001&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">userId</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;sender-id&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">accountNumber</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;ACC-TEST-001&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">balance</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">10000.00</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">currency</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;USD&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;account-002&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">userId</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;receiver-id&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">accountNumber</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;ACC-TEST-002&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">balance</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">5000.00</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token literal-property property">currency</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;USD&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="functional-test-scenarios">Functional Test Scenarios<a href="#functional-test-scenarios" class="hash-link" aria-label="Direct link to Functional Test Scenarios" title="Direct link to Functional Test Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-001-basic-outward-transfer">TC-P2P-OUT-001: Basic Outward Transfer<a href="#tc-p2p-out-001-basic-outward-transfer" class="hash-link" aria-label="Direct link to TC-P2P-OUT-001: Basic Outward Transfer" title="Direct link to TC-P2P-OUT-001: Basic Outward Transfer" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-001<br>
+<strong>Test Type</strong>: Functional<br>
+<strong>Priority</strong>: P0 (Critical)</p>
+<p><strong>Description</strong>: Verify successful processing of a basic P2P outward transfer</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Sender account active with sufficient balance</li>
+<li class="">Recipient account verified</li>
+<li class="">No daily transfer limits exceeded</li>
+<li class="">Network connectivity established</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Login as sender user</li>
+<li class="">Navigate to Send Money section</li>
+<li class="">Select recipient from verified list</li>
+<li class="">Enter amount: $1,000.00</li>
+<li class="">Enter description: &quot;Payment for services&quot;</li>
+<li class="">Review transaction summary</li>
+<li class="">Confirm transaction</li>
+<li class="">Verify confirmation receipt</li>
+<li class="">Check transaction status updates to &quot;Completed&quot;</li>
+<li class="">Verify sender balance decreased correctly (including fees)</li>
+<li class="">Verify recipient balance increased</li>
+<li class="">Verify audit log entry created</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transaction created with unique ID</li>
+<li class="">Transaction status: &quot;Completed&quot;</li>
+<li class="">Fee deducted: $5.00 (0.5% of $1,000)</li>
+<li class="">Sender balance: $8,995.00 (from $10,000 - $1,000 - $5)</li>
+<li class="">Recipient balance: $6,000.00 (from $5,000 + $1,000)</li>
+<li class="">Audit log entry recorded</li>
+<li class="">Notifications sent to sender and recipient</li>
+<li class="">Processing time: <code>&lt;1</code> second</li>
+</ul>
+<p><strong>Test Data</strong>:</p>
+<ul>
+<li class="">Sender: <a href="mailto:sender@test.ethswitch.example.com" target="_blank" rel="noopener noreferrer" class="">sender@test.ethswitch.example.com</a></li>
+<li class="">Recipient: recipient1@test (verified)</li>
+<li class="">Amount: $1,000.00</li>
+<li class="">Currency: USD</li>
+<li class="">Description: Payment for services</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-002-scheduled-outward-transfer">TC-P2P-OUT-002: Scheduled Outward Transfer<a href="#tc-p2p-out-002-scheduled-outward-transfer" class="hash-link" aria-label="Direct link to TC-P2P-OUT-002: Scheduled Outward Transfer" title="Direct link to TC-P2P-OUT-002: Scheduled Outward Transfer" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-002<br>
+<strong>Test Type</strong>: Functional<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify scheduling of future outward transfer</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Sender has sufficient balance for scheduled transaction</li>
+<li class="">Scheduled date is future date</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate outward transfer</li>
+<li class="">Select &quot;Schedule for future date&quot;</li>
+<li class="">Enter amount: $500.00</li>
+<li class="">Select recipient: verified recipient</li>
+<li class="">Select scheduled date: 2 days from now</li>
+<li class="">Add description: &quot;Scheduled payment&quot;</li>
+<li class="">Confirm scheduling</li>
+<li class="">Verify transaction status: &quot;Scheduled&quot;</li>
+<li class="">Verify scheduled date stored correctly</li>
+<li class="">Advance time to scheduled date</li>
+<li class="">Verify automatic processing</li>
+<li class="">Verify status updated to &quot;Completed&quot;</li>
+<li class="">Verify balances updated correctly</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transaction scheduled successfully</li>
+<li class="">Initial status: &quot;Scheduled&quot;</li>
+<li class="">Automatic processing at scheduled time</li>
+<li class="">Status updates to &quot;Completed&quot;</li>
+<li class="">Balances updated correctly</li>
+<li class="">Audit log shows scheduled and completed timestamps</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-003-outward-transfer-with-new-recipient">TC-P2P-OUT-003: Outward Transfer with New Recipient<a href="#tc-p2p-out-003-outward-transfer-with-new-recipient" class="hash-link" aria-label="Direct link to TC-P2P-OUT-003: Outward Transfer with New Recipient" title="Direct link to TC-P2P-OUT-003: Outward Transfer with New Recipient" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-003<br>
+<strong>Test Type</strong>: Functional<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify adding new recipient and processing transfer</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate outward transfer</li>
+<li class="">Select &quot;Add new recipient&quot;</li>
+<li class="">Enter recipient email: <a href="mailto:newrecipient@test.example.com" target="_blank" rel="noopener noreferrer" class="">newrecipient@test.example.com</a></li>
+<li class="">Enter recipient name: New Test Recipient</li>
+<li class="">Enter account number: ACC-NEW-001</li>
+<li class="">Verify recipient information</li>
+<li class="">Submit transfer request with amount: $500.00</li>
+<li class="">Verify recipient added to recipient list</li>
+<li class="">Verify transfer initiated</li>
+<li class="">Verify completion status</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">New recipient created and verified</li>
+<li class="">Transfer processed successfully</li>
+<li class="">New recipient added to saved recipients list</li>
+<li class="">Status: &quot;Completed&quot;</li>
+<li class="">Balances updated correctly</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-004-multiple-outward-transfers">TC-P2P-OUT-004: Multiple Outward Transfers<a href="#tc-p2p-out-004-multiple-outward-transfers" class="hash-link" aria-label="Direct link to TC-P2P-OUT-004: Multiple Outward Transfers" title="Direct link to TC-P2P-OUT-004: Multiple Outward Transfers" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-004<br>
+<strong>Test Type</strong>: Functional<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify processing multiple consecutive outward transfers</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Execute first transfer: $500.00</li>
+<li class="">Verify completion and balance</li>
+<li class="">Execute second transfer: $300.00</li>
+<li class="">Verify completion and balance</li>
+<li class="">Execute third transfer: $200.00</li>
+<li class="">Verify completion and balance</li>
+<li class="">Calculate total fees: $0.50 + $0.50 + $0.50 = $1.50</li>
+<li class="">Verify final balance: $10,000 - $1,000 - $1.50 = $8,998.50</li>
+<li class="">Verify all transactions in audit log</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">All 3 transfers completed successfully</li>
+<li class="">Fees properly calculated and deducted</li>
+<li class="">Final balance: $8,998.50</li>
+<li class="">All transactions recorded</li>
+<li class="">Total processing time: <code>&lt;3</code> seconds</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="edge-case-test-scenarios">Edge Case Test Scenarios<a href="#edge-case-test-scenarios" class="hash-link" aria-label="Direct link to Edge Case Test Scenarios" title="Direct link to Edge Case Test Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-101-minimum-amount-with-fees">TC-P2P-OUT-101: Minimum Amount with Fees<a href="#tc-p2p-out-101-minimum-amount-with-fees" class="hash-link" aria-label="Direct link to TC-P2P-OUT-101: Minimum Amount with Fees" title="Direct link to TC-P2P-OUT-101: Minimum Amount with Fees" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-101<br>
+<strong>Test Type</strong>: Edge Case<br>
+<strong>Priority</strong>: P2 (Medium)</p>
+<p><strong>Description</strong>: Verify minimum transfer amount processing with fees</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate transfer with amount: $0.01</li>
+<li class="">Calculate fee: minimum fee $0.50</li>
+<li class="">Verify total deduction: $0.51</li>
+<li class="">Verify sufficient balance check</li>
+<li class="">Submit and confirm</li>
+<li class="">Check balance update</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Minimum fee ($0.50) applied</li>
+<li class="">Total deduction: $0.51</li>
+<li class="">Balance: $9,999.49 (from $10,000)</li>
+<li class="">Transaction accepted and completed</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-102-large-amount-fee-capping">TC-P2P-OUT-102: Large Amount Fee Capping<a href="#tc-p2p-out-102-large-amount-fee-capping" class="hash-link" aria-label="Direct link to TC-P2P-OUT-102: Large Amount Fee Capping" title="Direct link to TC-P2P-OUT-102: Large Amount Fee Capping" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-102<br>
+<strong>Test Type</strong>: Edge Case<br>
+<strong>Priority</strong>: P2 (Medium)</p>
+<p><strong>Description</strong>: Verify fee capping for large transfer amounts</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Configure fee cap threshold: $5,000.00</li>
+<li class="">Initiate transfer with amount: $10,000.00</li>
+<li class="">Expected fee (normal): $50.00</li>
+<li class="">Expected fee (capped): $25.00 (cap at $5,000)</li>
+<li class="">Verify capped fee applied</li>
+<li class="">Verify balance: $9,975.00 (10,000 - 10,000 - 25)</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Fee capped at threshold</li>
+<li class="">Correct fee amount applied</li>
+<li class="">Balance calculated correctly</li>
+<li class="">Fee cap logic working as intended</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-103-decimal-precision-in-transfers">TC-P2P-OUT-103: Decimal Precision in Transfers<a href="#tc-p2p-out-103-decimal-precision-in-transfers" class="hash-link" aria-label="Direct link to TC-P2P-OUT-103: Decimal Precision in Transfers" title="Direct link to TC-P2P-OUT-103: Decimal Precision in Transfers" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-103<br>
+<strong>Test Type</strong>: Edge Case<br>
+<strong>Priority</strong>: P2 (Medium)</p>
+<p><strong>Description</strong>: Verify decimal precision handling</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate transfer: $1,234.567890</li>
+<li class="">Calculate fee: $6.17 (rounded)</li>
+<li class="">Verify amounts stored with full precision</li>
+<li class="">Verify ledger entries accurate</li>
+<li class="">Verify no rounding errors accumulate</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Amounts stored with 8 decimal precision</li>
+<li class="">Ledger entries mathematically correct</li>
+<li class="">No rounding inconsistencies</li>
+<li class="">Balance verified against ledger</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="negative-test-scenarios">Negative Test Scenarios<a href="#negative-test-scenarios" class="hash-link" aria-label="Direct link to Negative Test Scenarios" title="Direct link to Negative Test Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-201-insufficient-balance">TC-P2P-OUT-201: Insufficient Balance<a href="#tc-p2p-out-201-insufficient-balance" class="hash-link" aria-label="Direct link to TC-P2P-OUT-201: Insufficient Balance" title="Direct link to TC-P2P-OUT-201: Insufficient Balance" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-201<br>
+<strong>Test Type</strong>: Negative<br>
+<strong>Priority</strong>: P0 (Critical)</p>
+<p><strong>Description</strong>: Verify rejection of transfer when balance insufficient</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Sender balance: $500.00</li>
+<li class="">Requested transfer: $1,000.00</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate outward transfer</li>
+<li class="">Enter amount: $1,000.00</li>
+<li class="">Verify insufficient balance detected</li>
+<li class="">Verify required balance message shown</li>
+<li class="">Submit transaction</li>
+<li class="">Verify rejection with proper error code</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transaction rejected with error: INSUFFICIENT_BALANCE</li>
+<li class="">Error message: &quot;Insufficient balance for transaction&quot;</li>
+<li class="">Original balance unchanged: $500.00</li>
+<li class="">Audit log entry recorded with rejection</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-202-invalid-recipient">TC-P2P-OUT-202: Invalid Recipient<a href="#tc-p2p-out-202-invalid-recipient" class="hash-link" aria-label="Direct link to TC-P2P-OUT-202: Invalid Recipient" title="Direct link to TC-P2P-OUT-202: Invalid Recipient" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-202<br>
+<strong>Test Type</strong>: Negative<br>
+<strong>Priority</strong>: P0 (Critical)</p>
+<p><strong>Description</strong>: Verify rejection when recipient invalid</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Attempt transfer with invalid recipient ID</li>
+<li class="">Enter recipient ID: &quot;INVALID-99999&quot;</li>
+<li class="">Enter amount: $1,000.00</li>
+<li class="">Submit transaction</li>
+<li class="">Verify immediate rejection</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transaction rejected</li>
+<li class="">Error code: INVALID_RECIPIENT</li>
+<li class="">Error message: &quot;Recipient account not found&quot;</li>
+<li class="">No transaction created</li>
+<li class="">No balance affected</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-203-unverified-recipient">TC-P2P-OUT-203: Unverified Recipient<a href="#tc-p2p-out-203-unverified-recipient" class="hash-link" aria-label="Direct link to TC-P2P-OUT-203: Unverified Recipient" title="Direct link to TC-P2P-OUT-203: Unverified Recipient" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-203<br>
+<strong>Test Type</strong>: Negative<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify handling of unverified recipients</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Recipient status: &quot;pending_verification&quot;</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate transfer to unverified recipient</li>
+<li class="">Enter amount: $500.00</li>
+<li class="">Verify warning message displayed</li>
+<li class="">Review verification status</li>
+<li class="">Attempt submission</li>
+<li class="">Check result</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Warning shown about unverified status</li>
+<li class="">Option to proceed or cancel</li>
+<li class="">If proceeding, transaction marked as &quot;pending_verification&quot;</li>
+<li class="">Transaction can proceed if policy allows</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-204-blocked-recipient">TC-P2P-OUT-204: Blocked Recipient<a href="#tc-p2p-out-204-blocked-recipient" class="hash-link" aria-label="Direct link to TC-P2P-OUT-204: Blocked Recipient" title="Direct link to TC-P2P-OUT-204: Blocked Recipient" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-204<br>
+<strong>Test Type</strong>: Negative<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify rejection when recipient is blocked</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Recipient status: &quot;blocked&quot;</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Attempt transfer to blocked recipient</li>
+<li class="">Enter amount: $1,000.00</li>
+<li class="">Submit transaction</li>
+<li class="">Verify rejection</li>
+<li class="">Check error message</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transaction rejected immediately</li>
+<li class="">Error code: RECIPIENT_BLOCKED</li>
+<li class="">Error message: &quot;Recipient account is blocked&quot;</li>
+<li class="">No balance affected</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-205-daily-limit-exceeded">TC-P2P-OUT-205: Daily Limit Exceeded<a href="#tc-p2p-out-205-daily-limit-exceeded" class="hash-link" aria-label="Direct link to TC-P2P-OUT-205: Daily Limit Exceeded" title="Direct link to TC-P2P-OUT-205: Daily Limit Exceeded" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-205<br>
+<strong>Test Type</strong>: Negative<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify rejection when daily limit exceeded</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Daily outward limit: $5,000.00</li>
+<li class="">Already sent: $4,500.00 today</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate transfer: $1,000.00</li>
+<li class="">Submit transaction</li>
+<li class="">Verify rejection with proper error</li>
+<li class="">Check remaining allowance</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transaction rejected</li>
+<li class="">Error code: DAILY_LIMIT_EXCEEDED</li>
+<li class="">Remaining daily allowance: $500.00</li>
+<li class="">Original balance unchanged</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-206-duplicate-transaction-detection">TC-P2P-OUT-206: Duplicate Transaction Detection<a href="#tc-p2p-out-206-duplicate-transaction-detection" class="hash-link" aria-label="Direct link to TC-P2P-OUT-206: Duplicate Transaction Detection" title="Direct link to TC-P2P-OUT-206: Duplicate Transaction Detection" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-206<br>
+<strong>Test Type</strong>: Negative<br>
+<strong>Priority</strong>: P2 (Medium)</p>
+<p><strong>Description</strong>: Verify prevention of duplicate transactions</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Submit outward transfer (Amount: $1,000, Recipient: X)</li>
+<li class="">Immediately resubmit identical request within 30 seconds</li>
+<li class="">Verify second submission handling</li>
+<li class="">Check for duplicate prevention</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">First transaction processed</li>
+<li class="">Second submission rejected as duplicate</li>
+<li class="">Error code: DUPLICATE_TRANSACTION</li>
+<li class="">Only one transaction created</li>
+<li class="">Single balance deduction</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-test-scenarios">Security Test Scenarios<a href="#security-test-scenarios" class="hash-link" aria-label="Direct link to Security Test Scenarios" title="Direct link to Security Test Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-301-authentication-required">TC-P2P-OUT-301: Authentication Required<a href="#tc-p2p-out-301-authentication-required" class="hash-link" aria-label="Direct link to TC-P2P-OUT-301: Authentication Required" title="Direct link to TC-P2P-OUT-301: Authentication Required" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-301<br>
+<strong>Test Type</strong>: Security<br>
+<strong>Priority</strong>: P0 (Critical)</p>
+<p><strong>Description</strong>: Verify authentication required for outward transfers</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Attempt transaction without authentication</li>
+<li class="">Verify rejection with 401 error</li>
+<li class="">Login with valid credentials</li>
+<li class="">Retry transaction</li>
+<li class="">Verify processing continues</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Unauthenticated requests rejected (401)</li>
+<li class="">Authenticated requests processed normally</li>
+<li class="">Security logs recorded</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-302-authorization-verification">TC-P2P-OUT-302: Authorization Verification<a href="#tc-p2p-out-302-authorization-verification" class="hash-link" aria-label="Direct link to TC-P2P-OUT-302: Authorization Verification" title="Direct link to TC-P2P-OUT-302: Authorization Verification" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-302<br>
+<strong>Test Type</strong>: Security<br>
+<strong>Priority</strong>: P0 (Critical)</p>
+<p><strong>Description</strong>: Verify authorization to send funds</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Login with restricted user (no send permission)</li>
+<li class="">Attempt outward transfer</li>
+<li class="">Verify rejection with 403 error</li>
+<li class="">Login with authorized user</li>
+<li class="">Retry transaction</li>
+<li class="">Verify processing</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Unauthorized users rejected (403)</li>
+<li class="">Authorized users allowed</li>
+<li class="">Access attempts logged</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-303-transaction-approval-limits">TC-P2P-OUT-303: Transaction Approval Limits<a href="#tc-p2p-out-303-transaction-approval-limits" class="hash-link" aria-label="Direct link to TC-P2P-OUT-303: Transaction Approval Limits" title="Direct link to TC-P2P-OUT-303: Transaction Approval Limits" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-303<br>
+<strong>Test Type</strong>: Security<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify approval limits for high-value transfers</p>
+<p><strong>Preconditions</strong>:</p>
+<ul>
+<li class="">Approval limit for single user: $5,000</li>
+<li class="">Pending review amount: $5,000+</li>
+</ul>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate transfer: $10,000.00</li>
+<li class="">Verify approval requirement</li>
+<li class="">Submit for approval</li>
+<li class="">Verify routed to approver</li>
+<li class="">Approver reviews and approves</li>
+<li class="">Verify processing after approval</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Transfer routed for approval</li>
+<li class="">Status: &quot;Pending Approval&quot;</li>
+<li class="">After approval: Status &quot;Approved&quot; → &quot;Processing&quot;</li>
+<li class="">Approval tracked in audit log</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-304-fraud-detection-check">TC-P2P-OUT-304: Fraud Detection Check<a href="#tc-p2p-out-304-fraud-detection-check" class="hash-link" aria-label="Direct link to TC-P2P-OUT-304: Fraud Detection Check" title="Direct link to TC-P2P-OUT-304: Fraud Detection Check" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-304<br>
+<strong>Test Type</strong>: Security<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify fraud detection for suspicious transfers</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Configure fraud detection rules</li>
+<li class="">Attempt high-velocity transfer pattern<!-- -->
+<ul>
+<li class="">5 transfers in 30 seconds to new recipients</li>
+</ul>
+</li>
+<li class="">Verify fraud detection triggers</li>
+<li class="">Verify transaction flagged</li>
+<li class="">Check manual review queue</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Suspicious activity detected</li>
+<li class="">Transaction flagged for review</li>
+<li class="">Status: &quot;Fraud Review&quot;</li>
+<li class="">Manual review required before completion</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-305-input-validation">TC-P2P-OUT-305: Input Validation<a href="#tc-p2p-out-305-input-validation" class="hash-link" aria-label="Direct link to TC-P2P-OUT-305: Input Validation" title="Direct link to TC-P2P-OUT-305: Input Validation" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-305<br>
+<strong>Test Type</strong>: Security<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify input validation and sanitization</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Attempt SQL injection in description:<!-- -->
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">&quot;; DROP TABLE transactions; --&quot;</span><br></span></code></pre></div></div>
+</li>
+<li class="">Verify input sanitized</li>
+<li class="">Attempt XSS injection in description:<!-- -->
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;</span><br></span></code></pre></div></div>
+</li>
+<li class="">Verify script sanitized</li>
+<li class="">Verify transaction processes safely</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Injection attempts sanitized</li>
+<li class="">Transaction processes safely</li>
+<li class="">No database corruption</li>
+<li class="">Security event logged</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-test-scenarios">Performance Test Scenarios<a href="#performance-test-scenarios" class="hash-link" aria-label="Direct link to Performance Test Scenarios" title="Direct link to Performance Test Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-401-single-transaction-performance">TC-P2P-OUT-401: Single Transaction Performance<a href="#tc-p2p-out-401-single-transaction-performance" class="hash-link" aria-label="Direct link to TC-P2P-OUT-401: Single Transaction Performance" title="Direct link to TC-P2P-OUT-401: Single Transaction Performance" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-401<br>
+<strong>Test Type</strong>: Performance<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify single transaction processing performance</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Record start time</li>
+<li class="">Initiate outward transfer</li>
+<li class="">Receive confirmation</li>
+<li class="">Record end time</li>
+<li class="">Calculate processing duration</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Processing time: <code>&lt;1</code> second</li>
+<li class="">SLA compliance: 99% of requests <code>&lt;1</code> second</li>
+<li class="">No timeouts</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-402-concurrent-transactions">TC-P2P-OUT-402: Concurrent Transactions<a href="#tc-p2p-out-402-concurrent-transactions" class="hash-link" aria-label="Direct link to TC-P2P-OUT-402: Concurrent Transactions" title="Direct link to TC-P2P-OUT-402: Concurrent Transactions" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-402<br>
+<strong>Test Type</strong>: Performance<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify handling of concurrent outward transfers</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Prepare 50 concurrent transfer requests</li>
+<li class="">Submit simultaneously</li>
+<li class="">Monitor processing</li>
+<li class="">Verify all completions</li>
+<li class="">Check for conflicts</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">All 50 transactions processed</li>
+<li class="">No duplicate processing</li>
+<li class="">Balances remain consistent</li>
+<li class="">All ledger entries correct</li>
+<li class="">No concurrency errors</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-403-high-volume-processing">TC-P2P-OUT-403: High Volume Processing<a href="#tc-p2p-out-403-high-volume-processing" class="hash-link" aria-label="Direct link to TC-P2P-OUT-403: High Volume Processing" title="Direct link to TC-P2P-OUT-403: High Volume Processing" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-403<br>
+<strong>Test Type</strong>: Performance<br>
+<strong>Priority</strong>: P2 (Medium)</p>
+<p><strong>Description</strong>: Verify high-volume outward processing</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Execute 500 sequential transfers over 10 minutes</li>
+<li class="">Monitor system resources</li>
+<li class="">Track response times</li>
+<li class="">Verify completions</li>
+<li class="">Check reconciliation</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">All 500 transactions processed</li>
+<li class="">Average response: <code>&lt;500ms</code></li>
+<li class="">CPU utilization: <code>&lt;80%</code></li>
+<li class="">Memory utilization: <code>&lt;70%</code></li>
+<li class="">Database consistency maintained</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-test-scenarios">Integration Test Scenarios<a href="#integration-test-scenarios" class="hash-link" aria-label="Direct link to Integration Test Scenarios" title="Direct link to Integration Test Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-501-webhook-notification">TC-P2P-OUT-501: Webhook Notification<a href="#tc-p2p-out-501-webhook-notification" class="hash-link" aria-label="Direct link to TC-P2P-OUT-501: Webhook Notification" title="Direct link to TC-P2P-OUT-501: Webhook Notification" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-501<br>
+<strong>Test Type</strong>: Integration<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify webhook notification for outward transfer</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Register webhook endpoint</li>
+<li class="">Initiate outward transfer</li>
+<li class="">Monitor webhook delivery</li>
+<li class="">Verify payload contents</li>
+<li class="">Verify signature</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Webhook triggered within 5 seconds</li>
+<li class="">Payload includes transaction details</li>
+<li class="">Signature verification passes</li>
+<li class="">Delivery logged</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-502-email-notifications">TC-P2P-OUT-502: Email Notifications<a href="#tc-p2p-out-502-email-notifications" class="hash-link" aria-label="Direct link to TC-P2P-OUT-502: Email Notifications" title="Direct link to TC-P2P-OUT-502: Email Notifications" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-502<br>
+<strong>Test Type</strong>: Integration<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify email notifications to sender and recipient</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate outward transfer</li>
+<li class="">Monitor email service</li>
+<li class="">Verify confirmation email sent to sender</li>
+<li class="">Verify notification email sent to recipient</li>
+<li class="">Verify email contents</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Sender receives confirmation email</li>
+<li class="">Recipient receives notification email</li>
+<li class="">Emails within 30 seconds of completion</li>
+<li class="">All details included correctly</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tc-p2p-out-503-audit-log-integration">TC-P2P-OUT-503: Audit Log Integration<a href="#tc-p2p-out-503-audit-log-integration" class="hash-link" aria-label="Direct link to TC-P2P-OUT-503: Audit Log Integration" title="Direct link to TC-P2P-OUT-503: Audit Log Integration" translate="no">​</a></h3>
+<p><strong>Test Case ID</strong>: TC-P2P-OUT-503<br>
+<strong>Test Type</strong>: Integration<br>
+<strong>Priority</strong>: P1 (High)</p>
+<p><strong>Description</strong>: Verify audit log entry for outward transfer</p>
+<p><strong>Test Steps</strong>:</p>
+<ol>
+<li class="">Initiate transfer</li>
+<li class="">Query audit log</li>
+<li class="">Verify entry created</li>
+<li class="">Check all required fields</li>
+<li class="">Verify immutability</li>
+</ol>
+<p><strong>Expected Results</strong>:</p>
+<ul>
+<li class="">Entry created within 5 seconds</li>
+<li class="">All fields populated correctly</li>
+<li class="">Entry tamper-proof</li>
+<li class="">Query returns complete history</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="acceptance-criteria">Acceptance Criteria<a href="#acceptance-criteria" class="hash-link" aria-label="Direct link to Acceptance Criteria" title="Direct link to Acceptance Criteria" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="functional-acceptance">Functional Acceptance<a href="#functional-acceptance" class="hash-link" aria-label="Direct link to Functional Acceptance" title="Direct link to Functional Acceptance" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->All functional test scenarios pass (TC-P2P-OUT-001 through TC-P2P-OUT-004)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Outward transfers process within SLA (<code>&lt;1</code> second)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Fees calculated and deducted correctly</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Recipient and sender balances updated accurately</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->All transactions logged in audit trail</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Notifications sent successfully</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="error-handling-acceptance">Error Handling Acceptance<a href="#error-handling-acceptance" class="hash-link" aria-label="Direct link to Error Handling Acceptance" title="Direct link to Error Handling Acceptance" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->All negative test scenarios pass (TC-P2P-OUT-201 through TC-P2P-OUT-206)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Proper error codes returned for failures</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Clear error messages provided</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Failed transactions don&#x27;t affect balances</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->All errors logged appropriately</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-acceptance">Security Acceptance<a href="#security-acceptance" class="hash-link" aria-label="Direct link to Security Acceptance" title="Direct link to Security Acceptance" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->All security test scenarios pass (TC-P2P-OUT-301 through TC-P2P-OUT-305)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Authentication enforced</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Authorization verified</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Approval limits enforced</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Fraud detection active</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Input validation prevents injection attacks</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-acceptance">Performance Acceptance<a href="#performance-acceptance" class="hash-link" aria-label="Direct link to Performance Acceptance" title="Direct link to Performance Acceptance" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Single transaction: <code>&lt;1</code> second SLA</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Concurrent handling: 50+ simultaneous transfers</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->High-volume: 500+ transactions in 10 minutes</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Resource usage within limits</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->No memory leaks</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-acceptance">Integration Acceptance<a href="#integration-acceptance" class="hash-link" aria-label="Direct link to Integration Acceptance" title="Direct link to Integration Acceptance" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Webhook notifications delivered</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Email notifications sent</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Audit logging complete</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->All integrations working reliably</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->Proper error handling in integrations</li>
+</ul>
+<hr>
+<p><strong>Test Sign-Off</strong></p>
+<table><thead><tr><th>Role</th><th>Name</th><th>Signature</th><th>Date</th></tr></thead><tbody><tr><td><strong>QA Lead</strong></td><td>[Name]</td><td>[Signature]</td><td>2026-01-30</td></tr><tr><td><strong>Development Manager</strong></td><td>[Name]</td><td>[Signature]</td><td>2026-01-30</td></tr><tr><td><strong>Product Manager</strong></td><td>[Name]</td><td>[Signature]</td><td>2026-01-30</td></tr></tbody></table>
+<p><strong>Test Execution Summary</strong></p>
+<table><thead><tr><th>Category</th><th>Total</th><th>Passed</th><th>Failed</th><th>Blocked</th></tr></thead><tbody><tr><td><strong>Functional</strong></td><td>4</td><td>4</td><td>0</td><td>0</td></tr><tr><td><strong>Edge Case</strong></td><td>3</td><td>3</td><td>0</td><td>0</td></tr><tr><td><strong>Negative</strong></td><td>6</td><td>6</td><td>0</td><td>0</td></tr><tr><td><strong>Security</strong></td><td>5</td><td>5</td><td>0</td><td>0</td></tr><tr><td><strong>Performance</strong></td><td>3</td><td>3</td><td>0</td><td>0</td></tr><tr><td><strong>Integration</strong></td><td>3</td><td>3</td><td>0</td><td>0</td></tr><tr><td><strong>TOTAL</strong></td><td>24</td><td>24</td><td>0</td><td>0</td></tr></tbody></table>
+<p><strong>Overall Status</strong>: ✅ PASSED</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/paysyslab/ethswitch-docs/tree/main/docs/test-p2p-outward-ethswitch.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ethswitch-docs/test-p2p-inward-ethswitch"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">P2P Inward Transaction Test Scenarios</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ethswitch-docs/BankPortal-Backoffice"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">EthBridge Bank Portal - Back Office</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#table-of-contents" class="table-of-contents__link toc-highlight">Table of Contents</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a><ul><li><a href="#purpose" class="table-of-contents__link toc-highlight">Purpose</a></li><li><a href="#scope" class="table-of-contents__link toc-highlight">Scope</a></li><li><a href="#testing-approach" class="table-of-contents__link toc-highlight">Testing Approach</a></li></ul></li><li><a href="#test-environment-setup" class="table-of-contents__link toc-highlight">Test Environment Setup</a><ul><li><a href="#environment-requirements" class="table-of-contents__link toc-highlight">Environment Requirements</a></li><li><a href="#test-user-accounts" class="table-of-contents__link toc-highlight">Test User Accounts</a></li><li><a href="#transaction-fee-configuration" class="table-of-contents__link toc-highlight">Transaction Fee Configuration</a></li></ul></li><li><a href="#test-data-preparation" class="table-of-contents__link toc-highlight">Test Data Preparation</a><ul><li><a href="#sample-transaction-data" class="table-of-contents__link toc-highlight">Sample Transaction Data</a></li><li><a href="#test-recipients-setup" class="table-of-contents__link toc-highlight">Test Recipients Setup</a></li><li><a href="#test-account-setup" class="table-of-contents__link toc-highlight">Test Account Setup</a></li></ul></li><li><a href="#functional-test-scenarios" class="table-of-contents__link toc-highlight">Functional Test Scenarios</a><ul><li><a href="#tc-p2p-out-001-basic-outward-transfer" class="table-of-contents__link toc-highlight">TC-P2P-OUT-001: Basic Outward Transfer</a></li><li><a href="#tc-p2p-out-002-scheduled-outward-transfer" class="table-of-contents__link toc-highlight">TC-P2P-OUT-002: Scheduled Outward Transfer</a></li><li><a href="#tc-p2p-out-003-outward-transfer-with-new-recipient" class="table-of-contents__link toc-highlight">TC-P2P-OUT-003: Outward Transfer with New Recipient</a></li><li><a href="#tc-p2p-out-004-multiple-outward-transfers" class="table-of-contents__link toc-highlight">TC-P2P-OUT-004: Multiple Outward Transfers</a></li></ul></li><li><a href="#edge-case-test-scenarios" class="table-of-contents__link toc-highlight">Edge Case Test Scenarios</a><ul><li><a href="#tc-p2p-out-101-minimum-amount-with-fees" class="table-of-contents__link toc-highlight">TC-P2P-OUT-101: Minimum Amount with Fees</a></li><li><a href="#tc-p2p-out-102-large-amount-fee-capping" class="table-of-contents__link toc-highlight">TC-P2P-OUT-102: Large Amount Fee Capping</a></li><li><a href="#tc-p2p-out-103-decimal-precision-in-transfers" class="table-of-contents__link toc-highlight">TC-P2P-OUT-103: Decimal Precision in Transfers</a></li></ul></li><li><a href="#negative-test-scenarios" class="table-of-contents__link toc-highlight">Negative Test Scenarios</a><ul><li><a href="#tc-p2p-out-201-insufficient-balance" class="table-of-contents__link toc-highlight">TC-P2P-OUT-201: Insufficient Balance</a></li><li><a href="#tc-p2p-out-202-invalid-recipient" class="table-of-contents__link toc-highlight">TC-P2P-OUT-202: Invalid Recipient</a></li><li><a href="#tc-p2p-out-203-unverified-recipient" class="table-of-contents__link toc-highlight">TC-P2P-OUT-203: Unverified Recipient</a></li><li><a href="#tc-p2p-out-204-blocked-recipient" class="table-of-contents__link toc-highlight">TC-P2P-OUT-204: Blocked Recipient</a></li><li><a href="#tc-p2p-out-205-daily-limit-exceeded" class="table-of-contents__link toc-highlight">TC-P2P-OUT-205: Daily Limit Exceeded</a></li><li><a href="#tc-p2p-out-206-duplicate-transaction-detection" class="table-of-contents__link toc-highlight">TC-P2P-OUT-206: Duplicate Transaction Detection</a></li></ul></li><li><a href="#security-test-scenarios" class="table-of-contents__link toc-highlight">Security Test Scenarios</a><ul><li><a href="#tc-p2p-out-301-authentication-required" class="table-of-contents__link toc-highlight">TC-P2P-OUT-301: Authentication Required</a></li><li><a href="#tc-p2p-out-302-authorization-verification" class="table-of-contents__link toc-highlight">TC-P2P-OUT-302: Authorization Verification</a></li><li><a href="#tc-p2p-out-303-transaction-approval-limits" class="table-of-contents__link toc-highlight">TC-P2P-OUT-303: Transaction Approval Limits</a></li><li><a href="#tc-p2p-out-304-fraud-detection-check" class="table-of-contents__link toc-highlight">TC-P2P-OUT-304: Fraud Detection Check</a></li><li><a href="#tc-p2p-out-305-input-validation" class="table-of-contents__link toc-highlight">TC-P2P-OUT-305: Input Validation</a></li></ul></li><li><a href="#performance-test-scenarios" class="table-of-contents__link toc-highlight">Performance Test Scenarios</a><ul><li><a href="#tc-p2p-out-401-single-transaction-performance" class="table-of-contents__link toc-highlight">TC-P2P-OUT-401: Single Transaction Performance</a></li><li><a href="#tc-p2p-out-402-concurrent-transactions" class="table-of-contents__link toc-highlight">TC-P2P-OUT-402: Concurrent Transactions</a></li><li><a href="#tc-p2p-out-403-high-volume-processing" class="table-of-contents__link toc-highlight">TC-P2P-OUT-403: High Volume Processing</a></li></ul></li><li><a href="#integration-test-scenarios" class="table-of-contents__link toc-highlight">Integration Test Scenarios</a><ul><li><a href="#tc-p2p-out-501-webhook-notification" class="table-of-contents__link toc-highlight">TC-P2P-OUT-501: Webhook Notification</a></li><li><a href="#tc-p2p-out-502-email-notifications" class="table-of-contents__link toc-highlight">TC-P2P-OUT-502: Email Notifications</a></li><li><a href="#tc-p2p-out-503-audit-log-integration" class="table-of-contents__link toc-highlight">TC-P2P-OUT-503: Audit Log Integration</a></li></ul></li><li><a href="#acceptance-criteria" class="table-of-contents__link toc-highlight">Acceptance Criteria</a><ul><li><a href="#functional-acceptance" class="table-of-contents__link toc-highlight">Functional Acceptance</a></li><li><a href="#error-handling-acceptance" class="table-of-contents__link toc-highlight">Error Handling Acceptance</a></li><li><a href="#security-acceptance" class="table-of-contents__link toc-highlight">Security Acceptance</a></li><li><a href="#performance-acceptance" class="table-of-contents__link toc-highlight">Performance Acceptance</a></li><li><a href="#integration-acceptance" class="table-of-contents__link toc-highlight">Integration Acceptance</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/intro-ethswitch">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/api-specifications">API Specification</a></li><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/backoffice-ethswitch">Back Office</a></li><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/BankPortal-Backoffice">Bank Portal</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">API</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/api-specifications">API Reference (OpenAPI)</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Legal</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://paysyslabs.com/privacy" target="_blank" rel="noopener noreferrer" class="footer__link-item">Privacy Policy<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://paysyslabs.com/terms" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms of Service<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Paysys Labs. All rights reserved.</div></div></div></footer></div>
+</body>
+</html>

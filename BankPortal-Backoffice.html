@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-BankPortal-Backoffice" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">EthBridge Bank Portal - Back Office | ETHSwitch</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://paysyslab.github.io/ethswitch-docs/img/PaysysLogo.png"><meta data-rh="true" name="twitter:image" content="https://paysyslab.github.io/ethswitch-docs/img/PaysysLogo.png"><meta data-rh="true" property="og:url" content="https://paysyslab.github.io/ethswitch-docs/BankPortal-Backoffice"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="EthBridge Bank Portal - Back Office | ETHSwitch"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/ethswitch-docs/img/favicon.png"><link data-rh="true" rel="canonical" href="https://paysyslab.github.io/ethswitch-docs/BankPortal-Backoffice"><link data-rh="true" rel="alternate" href="https://paysyslab.github.io/ethswitch-docs/BankPortal-Backoffice" hreflang="en"><link data-rh="true" rel="alternate" href="https://paysyslab.github.io/ethswitch-docs/BankPortal-Backoffice" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"EthBridge Bank Portal - Back Office","item":"https://paysyslab.github.io/ethswitch-docs/BankPortal-Backoffice"}]}</script><link rel="stylesheet" href="/ethswitch-docs/assets/css/styles.e39039b7.css">
+<script src="/ethswitch-docs/assets/js/runtime~main.ef176dd5.js" defer="defer"></script>
+<script src="/ethswitch-docs/assets/js/main.e990836d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script><div id="__docusaurus"><link rel="preload" as="image" href="/ethswitch-docs/img/eslogo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ethswitch-docs/"><div class="navbar__logo"><img src="/ethswitch-docs/img/eslogo.png" alt="ETHSwitch Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/ethswitch-docs/img/eslogo.png" alt="ETHSwitch Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ethswitch-docs/">Overview</a><a class="navbar__item navbar__link" href="/ethswitch-docs/api-specifications">API Specification</a><a class="navbar__item navbar__link" href="/ethswitch-docs/backoffice-ethswitch">Enterprise Portal Back Office</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ethswitch-docs/BankPortal-Backoffice">Bank Portal Back Office</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/paysyslab/ethswitch-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/intro-ethswitch"><span title="EthBridge Enterprise Portal - Introduction" class="linkLabel_WmDU">EthBridge Enterprise Portal - Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/productfeature-ethswitch"><span title="EthBridge Enterprise Portal - Product Features Documentation" class="linkLabel_WmDU">EthBridge Enterprise Portal - Product Features Documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/technical-spec-ethswitch"><span title="Technical Specification Document" class="linkLabel_WmDU">Technical Specification Document</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/functional-spec-ethswitch"><span title="Functional Specification Document (FSD)" class="linkLabel_WmDU">Functional Specification Document (FSD)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/fsd-bulk-payments-ethswitch"><span title="Functional Specification - Bulk Payments (EthSwitch)" class="linkLabel_WmDU">Functional Specification - Bulk Payments (EthSwitch)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/deployment-guide-ethswitch"><span title="EthSwitch Deployment Guide" class="linkLabel_WmDU">EthSwitch Deployment Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/operational-guide-ethswitch"><span title="EthBridge Operational Guide" class="linkLabel_WmDU">EthBridge Operational Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/backoffice-ethswitch"><span title="EthBridge Enterprise Portal - Back Office" class="linkLabel_WmDU">EthBridge Enterprise Portal - Back Office</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/test-p2p-inward-ethswitch"><span title="P2P Inward Transaction Test Scenarios" class="linkLabel_WmDU">P2P Inward Transaction Test Scenarios</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ethswitch-docs/test-p2p-outward-ethswitch"><span title="P2P Outward Transaction Test Scenarios" class="linkLabel_WmDU">P2P Outward Transaction Test Scenarios</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ethswitch-docs/BankPortal-Backoffice"><span title="EthBridge Bank Portal - Back Office" class="linkLabel_WmDU">EthBridge Bank Portal - Back Office</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ethswitch-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">EthBridge Bank Portal - Back Office</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>EthBridge Bank Portal - Back Office</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>The EthBridge Bank Portal Back Office is a comprehensive administrative interface designed for managing transactions, users, certificates, and system configurations. This documentation covers all features and functionality available in the back office portal.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="table-of-contents">Table of Contents<a href="#table-of-contents" class="hash-link" aria-label="Direct link to Table of Contents" title="Direct link to Table of Contents" translate="no">​</a></h2>
+<ol>
+<li class=""><a href="#dashboard" class="">Dashboard</a></li>
+<li class=""><a href="#user-management" class="">User Management</a></li>
+<li class=""><a href="#role-management" class="">Role Management</a></li>
+<li class=""><a href="#transaction-services" class="">Transaction Services</a></li>
+<li class=""><a href="#batch-payments" class="">Batch Payments</a></li>
+<li class=""><a href="#reports--analytics" class="">Reports &amp; Analytics</a></li>
+<li class=""><a href="#security--compliance" class="">Security &amp; Compliance</a></li>
+<li class=""><a href="#configurations" class="">Configurations</a></li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dashboard">Dashboard<a href="#dashboard" class="hash-link" aria-label="Direct link to Dashboard" title="Direct link to Dashboard" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-1">Overview<a href="#overview-1" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h3>
+<p>The Dashboard provides a comprehensive overview of your banking operations and transactions with real-time metrics and visual analytics.</p>
+<p><img decoding="async" loading="lazy" alt="Dashboard Interface" src="/ethswitch-docs/assets/images/EBP-Dashboard-66de72eb981cc680125a9e492a971fbe.png" width="1920" height="2967" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dashboard-data">Dashboard Data<a href="#dashboard-data" class="hash-link" aria-label="Direct link to Dashboard Data" title="Direct link to Dashboard Data" translate="no">​</a></h3>
+<p>The dashboard displays updated information with the timestamp showing &quot;Dashboard data last updated at 12:45:57 PM&quot;</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-metrics">Key Metrics<a href="#key-metrics" class="hash-link" aria-label="Direct link to Key Metrics" title="Direct link to Key Metrics" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-types">Transaction Types<a href="#transaction-types" class="hash-link" aria-label="Direct link to Transaction Types" title="Direct link to Transaction Types" translate="no">​</a></h4>
+<p><strong>1. P2P Transfers</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 1,243 transactions</li>
+<li class=""><strong>Volume</strong>: ETB 4,258,900</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↑ 12% (green indicator)</li>
+</ul>
+<p><strong>2. P2M Payments</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 965 transactions</li>
+<li class=""><strong>Volume</strong>: ETB 1,236,800</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↑ 8% (green indicator)</li>
+</ul>
+<p><strong>3. QRC Payments</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 892 transactions</li>
+<li class=""><strong>Volume</strong>: ETB 2,134,500</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↑ 8% (green indicator)</li>
+</ul>
+<p><strong>4. RTP Payments</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 567 transactions</li>
+<li class=""><strong>Volume</strong>: ETB 1,876,300</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↓ 5% (red indicator)</li>
+</ul>
+<p><strong>5. Bulk Payments</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 124 transactions</li>
+<li class=""><strong>Volume</strong>: ETB 5,432,100</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↑ 5% (green indicator)</li>
+</ul>
+<p><strong>6. Bulk Receiving</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 98 transactions</li>
+<li class=""><strong>Volume</strong>: ETB 4,321,000</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↓ 5% (red indicator)</li>
+</ul>
+<p><strong>7. AUAS Registered</strong></p>
+<ul>
+<li class=""><strong>Count</strong>: 432 transactions</li>
+<li class=""><strong>Volume</strong>: Varies</li>
+<li class=""><strong>Status</strong>: Shows Success and Failed counts</li>
+<li class=""><strong>Change</strong>: ↑ 24% (green indicator)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="analytics-visualizations">Analytics Visualizations<a href="#analytics-visualizations" class="hash-link" aria-label="Direct link to Analytics Visualizations" title="Direct link to Analytics Visualizations" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-count-graph">Transaction Count Graph<a href="#transaction-count-graph" class="hash-link" aria-label="Direct link to Transaction Count Graph" title="Direct link to Transaction Count Graph" translate="no">​</a></h4>
+<ul>
+<li class="">Time-series graph showing transaction volume trends</li>
+<li class="">Color-coded by transaction type (P2P, P2M, QRC, RTP)</li>
+<li class="">Displays hourly transaction counts throughout the day (00:00 - 20:00)</li>
+<li class="">Peak transaction volume visible during business hours</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-distribution-pie-chart">Transaction Distribution Pie Chart<a href="#transaction-distribution-pie-chart" class="hash-link" aria-label="Direct link to Transaction Distribution Pie Chart" title="Direct link to Transaction Distribution Pie Chart" translate="no">​</a></h4>
+<ul>
+<li class="">Visual breakdown of transactions by type</li>
+<li class="">Color-coded segments:<!-- -->
+<ul>
+<li class=""><strong>P2P</strong>: Dark blue (largest segment)</li>
+<li class=""><strong>P2M</strong>: Orange</li>
+<li class=""><strong>QRC</strong>: Light blue</li>
+<li class=""><strong>RTP</strong>: Gray</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-value-bar-chart">Transaction Value Bar Chart<a href="#transaction-value-bar-chart" class="hash-link" aria-label="Direct link to Transaction Value Bar Chart" title="Direct link to Transaction Value Bar Chart" translate="no">​</a></h4>
+<ul>
+<li class="">Shows monetary transaction values over time periods</li>
+<li class="">Displays values in ETB (Ethiopian Birr)</li>
+<li class="">Grouped by transaction type</li>
+<li class="">Time periods from 00:00 to 20:00</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-status-indicators">System Status Indicators<a href="#system-status-indicators" class="hash-link" aria-label="Direct link to System Status Indicators" title="Direct link to System Status Indicators" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Core Banking</strong>: Operational (green)</li>
+<li class=""><strong>Payment Gateway</strong>: Operational (green)</li>
+<li class=""><strong>Mobile Banking</strong>: Operational (green)</li>
+<li class=""><strong>ATM Network</strong>: Degraded (orange/yellow)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recent-transactions-table">Recent Transactions Table<a href="#recent-transactions-table" class="hash-link" aria-label="Direct link to Recent Transactions Table" title="Direct link to Recent Transactions Table" translate="no">​</a></h3>
+<table><thead><tr><th>Date &amp; Time</th><th>Sender Bank</th><th>Receiver Bank</th><th>Amount</th><th>Type</th><th>Status</th></tr></thead><tbody><tr><td>2023-05-10 14:30:22</td><td>AMHRETAA (Amhara Bank S.C.)</td><td>CBEETAA (Commercial Bank of Ethiopia)</td><td>ETB 5,000</td><td>P2P</td><td>Success ✓</td></tr><tr><td>2023-05-10 14:26:15</td><td>AMHRETAA (Amhara Bank S.C.)</td><td>DASHETAA (Dashen Bank S.C.)</td><td>ETB 3,500</td><td>P2M</td><td>Failed ✗</td></tr><tr><td>2023-05-10 14:25:47</td><td>BUNAETAA (Bunna International Bank S.C.)</td><td>AMHRETAA (Amhara Bank S.C.)</td><td>ETB 2,800</td><td>P2P</td><td>Success ✓</td></tr><tr><td>2023-05-10 14:20:33</td><td>NIBIIETAA (NIB International Bank S.C. (NIB))</td><td>AMHRETAA (Amhara Bank S.C.)</td><td>ETB 4,000</td><td>P2M</td><td>Success ✓</td></tr><tr><td>2023-05-10 14:15:19</td><td>AMHRETAA (Amhara Bank S.C.)</td><td>WEGAETAA (Wegagen Bank S.C.)</td><td>ETB 1,500</td><td>P2P</td><td>Failed ✗</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-management">User Management<a href="#user-management" class="hash-link" aria-label="Direct link to User Management" title="Direct link to User Management" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-2">Overview<a href="#overview-2" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h3>
+<p>The User Management module provides comprehensive user administration capabilities including user creation, modification, deletion, and status management.</p>
+<p><img decoding="async" loading="lazy" alt="User Management Interface" src="/ethswitch-docs/assets/images/EBP-UserManagement-e5e55d3727f5ca8e77dcee9d1994fd57.png" width="1920" height="1156" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-new-user">Create New User<a href="#create-new-user" class="hash-link" aria-label="Direct link to Create New User" title="Direct link to Create New User" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Button</strong>: &quot;+ Add New User&quot; (orange button)</li>
+<li class="">Allows administrators to create new user accounts</li>
+<li class="">Assigns roles and permissions during user creation</li>
+<li class="">Sets initial passwords and account status</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="search-users">Search Users<a href="#search-users" class="hash-link" aria-label="Direct link to Search Users" title="Direct link to Search Users" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Search Bar</strong>: &quot;Search users...&quot;</li>
+<li class="">Quick search by:<!-- -->
+<ul>
+<li class="">User name</li>
+<li class="">Email address</li>
+<li class="">Phone number</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-listing-table">User Listing Table<a href="#user-listing-table" class="hash-link" aria-label="Direct link to User Listing Table" title="Direct link to User Listing Table" translate="no">​</a></h4>
+<table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>User&#x27;s full name and phone number</td></tr><tr><td><strong>Email</strong></td><td>User&#x27;s email address</td></tr><tr><td><strong>Role</strong></td><td>Assigned role (Administrator, Manager, Operator, Auditor)</td></tr><tr><td><strong>Status</strong></td><td>Account status indicator (Active, Inactive, Locked)</td></tr><tr><td><strong>Last Login</strong></td><td>Timestamp of last successful login</td></tr><tr><td><strong>Actions</strong></td><td>Edit, Reset Password, Delete</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sample-users">Sample Users<a href="#sample-users" class="hash-link" aria-label="Direct link to Sample Users" title="Direct link to Sample Users" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-john-doe">1. John Doe<a href="#1-john-doe" class="hash-link" aria-label="Direct link to 1. John Doe" title="Direct link to 1. John Doe" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Phone</strong>: +1234567890</li>
+<li class=""><strong>Email</strong>: <a href="mailto:john.doe@example.com" target="_blank" rel="noopener noreferrer" class="">john.doe@example.com</a></li>
+<li class=""><strong>Role</strong>: Administrator</li>
+<li class=""><strong>Status</strong>: Active (green)</li>
+<li class=""><strong>Last Login</strong>: 2023-05-10 09:45:22</li>
+<li class=""><strong>Actions</strong>: Edit, Reset Password, Delete</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-jane-smith">2. Jane Smith<a href="#2-jane-smith" class="hash-link" aria-label="Direct link to 2. Jane Smith" title="Direct link to 2. Jane Smith" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Phone</strong>: +1987654321</li>
+<li class=""><strong>Email</strong>: <a href="mailto:jane.smith@example.com" target="_blank" rel="noopener noreferrer" class="">jane.smith@example.com</a></li>
+<li class=""><strong>Role</strong>: Manager</li>
+<li class=""><strong>Status</strong>: Active (green)</li>
+<li class=""><strong>Last Login</strong>: 2023-05-09 14:30:10</li>
+<li class=""><strong>Actions</strong>: Edit, Reset Password, Delete</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-michael-johnson">3. Michael Johnson<a href="#3-michael-johnson" class="hash-link" aria-label="Direct link to 3. Michael Johnson" title="Direct link to 3. Michael Johnson" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Phone</strong>: +1122334455</li>
+<li class=""><strong>Email</strong>: <a href="mailto:michael.johnson@example.com" target="_blank" rel="noopener noreferrer" class="">michael.johnson@example.com</a></li>
+<li class=""><strong>Role</strong>: Operator</li>
+<li class=""><strong>Status</strong>: Inactive (gray)</li>
+<li class=""><strong>Last Login</strong>: 2023-04-25 11:15:45</li>
+<li class=""><strong>Actions</strong>: Edit, Reset Password, Delete</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-sarah-williams">4. Sarah Williams<a href="#4-sarah-williams" class="hash-link" aria-label="Direct link to 4. Sarah Williams" title="Direct link to 4. Sarah Williams" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Phone</strong>: +1555666777</li>
+<li class=""><strong>Email</strong>: <a href="mailto:sarah.williams@example.com" target="_blank" rel="noopener noreferrer" class="">sarah.williams@example.com</a></li>
+<li class=""><strong>Role</strong>: Auditor</li>
+<li class=""><strong>Status</strong>: Locked (red)</li>
+<li class=""><strong>Last Login</strong>: 2023-04-15 16:20:30</li>
+<li class=""><strong>Actions</strong>: Edit, Reset Password, Delete</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-status-indicators">User Status Indicators<a href="#user-status-indicators" class="hash-link" aria-label="Direct link to User Status Indicators" title="Direct link to User Status Indicators" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Active</strong> (Green): User can access the system</li>
+<li class=""><strong>Inactive</strong> (Gray): User account is disabled</li>
+<li class=""><strong>Locked</strong> (Red): Account locked due to security violations</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="role-management">Role Management<a href="#role-management" class="hash-link" aria-label="Direct link to Role Management" title="Direct link to Role Management" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-3">Overview<a href="#overview-3" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h3>
+<p>The Role Management module allows administrators to define and manage user roles with granular permission control.</p>
+<p><img decoding="async" loading="lazy" alt="Role Management Interface" src="/ethswitch-docs/assets/images/EBP-RoleManagement-b28ea351718a0e42a3f95a1158e08544.png" width="1920" height="1146" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-1">Features<a href="#features-1" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-new-role">Create New Role<a href="#create-new-role" class="hash-link" aria-label="Direct link to Create New Role" title="Direct link to Create New Role" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Button</strong>: &quot;+ Add New Role&quot; (orange button)</li>
+<li class="">Define custom roles with specific permissions</li>
+<li class="">Add descriptions for role purposes</li>
+<li class="">Assign permissions individually</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="search-roles">Search Roles<a href="#search-roles" class="hash-link" aria-label="Direct link to Search Roles" title="Direct link to Search Roles" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Search Bar</strong>: &quot;Search roles...&quot;</li>
+<li class="">Filter roles by name or description</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="role-listing-table">Role Listing Table<a href="#role-listing-table" class="hash-link" aria-label="Direct link to Role Listing Table" title="Direct link to Role Listing Table" translate="no">​</a></h4>
+<table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody><tr><td><strong>Role Name</strong></td><td>Name of the role</td></tr><tr><td><strong>Description</strong></td><td>Purpose and scope of the role</td></tr><tr><td><strong>Permissions</strong></td><td>List of assigned permissions (expandable)</td></tr><tr><td><strong>Status</strong></td><td>Active or Inactive</td></tr><tr><td><strong>Last Updated</strong></td><td>Modification timestamp</td></tr><tr><td><strong>Actions</strong></td><td>Edit, Delete</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-defined-roles">Pre-defined Roles<a href="#pre-defined-roles" class="hash-link" aria-label="Direct link to Pre-defined Roles" title="Direct link to Pre-defined Roles" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-administrator">1. Administrator<a href="#1-administrator" class="hash-link" aria-label="Direct link to 1. Administrator" title="Direct link to 1. Administrator" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Description</strong>: Full system access</li>
+<li class=""><strong>Permissions</strong>:<!-- -->
+<ul>
+<li class="">Dashboard View</li>
+<li class="">Transactions View</li>
+<li class="">Transactions Manage</li>
+<li class="">Users View</li>
+<li class="">Users Manage</li>
+<li class="">Reports View</li>
+<li class="">Reports Generate</li>
+<li class="">Configuration Manage</li>
+<li class="">+8 more permissions</li>
+</ul>
+</li>
+<li class=""><strong>Status</strong>: Active (green)</li>
+<li class=""><strong>Last Updated</strong>: 2023-03-20</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-manager">2. Manager<a href="#2-manager" class="hash-link" aria-label="Direct link to 2. Manager" title="Direct link to 2. Manager" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Description</strong>: Access to manage users and view reports</li>
+<li class=""><strong>Permissions</strong>:<!-- -->
+<ul>
+<li class="">Dashboard View</li>
+<li class="">Transactions View</li>
+<li class="">Users View</li>
+<li class="">Users Manage (limited)</li>
+<li class="">Reports View</li>
+<li class="">Reports Generate (limited)</li>
+<li class="">+4 more permissions</li>
+</ul>
+</li>
+<li class=""><strong>Status</strong>: Active (green)</li>
+<li class=""><strong>Last Updated</strong>: 2023-02-10</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-operator">3. Operator<a href="#3-operator" class="hash-link" aria-label="Direct link to 3. Operator" title="Direct link to 3. Operator" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Description</strong>: Limited access to operational functions</li>
+<li class=""><strong>Permissions</strong>:<!-- -->
+<ul>
+<li class="">Dashboard View</li>
+<li class="">Transactions View</li>
+<li class="">Reports View</li>
+</ul>
+</li>
+<li class=""><strong>Status</strong>: Active (green)</li>
+<li class=""><strong>Last Updated</strong>: 2023-02-05</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-auditor">4. Auditor<a href="#4-auditor" class="hash-link" aria-label="Direct link to 4. Auditor" title="Direct link to 4. Auditor" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Description</strong>: View-only access for audit purposes</li>
+<li class=""><strong>Permissions</strong>:<!-- -->
+<ul>
+<li class="">Dashboard View</li>
+<li class="">Transactions View</li>
+<li class="">Reports View</li>
+<li class="">Audit Log View</li>
+<li class="">+1 more permission</li>
+</ul>
+</li>
+<li class=""><strong>Status</strong>: Inactive (red)</li>
+<li class=""><strong>Last Updated</strong>: 2023-04-15</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="permission-types">Permission Types<a href="#permission-types" class="hash-link" aria-label="Direct link to Permission Types" title="Direct link to Permission Types" translate="no">​</a></h3>
+<p>Permissions are organized by resource and action:</p>
+<ul>
+<li class=""><strong>Dashboard</strong>: View, Manage</li>
+<li class=""><strong>Transactions</strong>: View, Create, Update, Delete, Reverse</li>
+<li class=""><strong>Users</strong>: View, Create, Update, Delete</li>
+<li class=""><strong>Roles</strong>: View, Create, Update, Delete</li>
+<li class=""><strong>Reports</strong>: View, Generate, Export, Schedule</li>
+<li class=""><strong>Certificates</strong>: View, Upload, Modify, Deactivate</li>
+<li class=""><strong>Configuration</strong>: View, Modify, Save</li>
+<li class=""><strong>Audit Logs</strong>: View, Export</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-services">Transaction Services<a href="#transaction-services" class="hash-link" aria-label="Direct link to Transaction Services" title="Direct link to Transaction Services" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-monitoring">Transaction Monitoring<a href="#transaction-monitoring" class="hash-link" aria-label="Direct link to Transaction Monitoring" title="Direct link to Transaction Monitoring" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Transaction Monitoring Interface" src="/ethswitch-docs/assets/images/EBP-TransactionMonitoring-76a4c331e0373457ca9e2f7a6f1a5e67.png" width="1920" height="1592" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-2">Features<a href="#features-2" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h4>
+<p><strong>Live Update Mode</strong></p>
+<ul>
+<li class="">Toggle between Live (15m, 1h intervals) and Historical data</li>
+<li class="">Status buttons: All Status, Success, Failed</li>
+<li class="">Type filters: All Types, P2P, P2M</li>
+<li class="">Search functionality across transaction fields</li>
+<li class="">Export data capability</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-monitoring-table">Transaction Monitoring Table<a href="#transaction-monitoring-table" class="hash-link" aria-label="Direct link to Transaction Monitoring Table" title="Direct link to Transaction Monitoring Table" translate="no">​</a></h4>
+<table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody><tr><td><strong>Date Time</strong></td><td>Transaction timestamp</td></tr><tr><td><strong>Sender Bank BIC</strong></td><td>Sender&#x27;s bank code</td></tr><tr><td><strong>Sender Bank Name</strong></td><td>Full name of sender&#x27;s bank</td></tr><tr><td><strong>Sender Account</strong></td><td>Sender&#x27;s account number</td></tr><tr><td><strong>Receiver Bank BIC</strong></td><td>Receiver&#x27;s bank code</td></tr><tr><td><strong>Receiver Bank Name</strong></td><td>Full name of receiver&#x27;s bank</td></tr><tr><td><strong>Receiver Account</strong></td><td>Receiver&#x27;s account number</td></tr><tr><td><strong>Status</strong></td><td>Success or Failed indicator</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sample-transactions-live">Sample Transactions (Live)<a href="#sample-transactions-live" class="hash-link" aria-label="Direct link to Sample Transactions (Live)" title="Direct link to Sample Transactions (Live)" translate="no">​</a></h4>
+<table><thead><tr><th>Date &amp; Time</th><th>Sender Bank</th><th>Sender Bank Name</th><th>Sender Account</th><th>Receiver Bank</th><th>Receiver Bank Name</th><th>Receiver Account</th><th>Status</th></tr></thead><tbody><tr><td>2023-05-10 14:30:22</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000123456789</td><td>CBEETAA</td><td>Commercial Bank of Ethiopia (CBE)</td><td>2000876543...</td><td>Success</td></tr><tr><td>2023-05-10 14:28:15</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000123456789</td><td>DASHETAA</td><td>Dashen Bank S.C.</td><td>2000876543...</td><td>Success</td></tr><tr><td>2023-05-10 14:25:47</td><td>BUNAETAA</td><td>Bunna International Bank S.C.</td><td>1000234567890</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>2000876543...</td><td>Success</td></tr><tr><td>2023-05-10 14:20:33</td><td>NIBIIETAA</td><td>NIB International Bank S.C. (NIB)</td><td>1000434567890</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>2000876543...</td><td>Success</td></tr><tr><td>2023-05-10 14:15:19</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000534567890</td><td>WEGAETAA</td><td>Wegagen Bank S.C.</td><td>2000876543...</td><td>Success</td></tr><tr><td>2026-01-30 12:50:40</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000789076551</td><td>AWINETAA</td><td>Awash Bank S.C.</td><td>2000143523...</td><td>Success</td></tr><tr><td>2026-01-30 12:50:40</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000789076551</td><td>AWINETAA</td><td>Awash Bank S.C.</td><td>2000143523...</td><td>Success</td></tr><tr><td>2026-01-30 12:50:40</td><td>CBEETAA</td><td>Cooperative Bank of Oromia S.C. (COOP)</td><td>1000640480449</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>2000871254...</td><td>Success</td></tr><tr><td>2026-01-30 12:50:40</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000556583397</td><td>BUNAETAA</td><td>Bunna International Bank S.C.</td><td>2000165950...</td><td>Success</td></tr><tr><td>2026-01-30 12:50:40</td><td>AMHRETAA</td><td>Amhara Bank S.C.</td><td>1000633062320</td><td>BUNAETAA</td><td>Bunna International Bank S.C.</td><td>2000590024...</td><td>Success</td></tr></tbody></table>
+<p><strong>Pagination</strong>: Showing 1-10 of 1001 transactions, 10 per page</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-search">Transaction Search<a href="#transaction-search" class="hash-link" aria-label="Direct link to Transaction Search" title="Direct link to Transaction Search" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Transaction Search Interface" src="/ethswitch-docs/assets/images/EBP-TransactionSearch-aefed45796fcf15974cce73675abb2de.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Advanced search functionality for finding specific transactions.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="search-filters">Search Filters<a href="#search-filters" class="hash-link" aria-label="Direct link to Search Filters" title="Direct link to Search Filters" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>From Date</strong>: mm/dd/yyyy date picker</li>
+<li class=""><strong>To Date</strong>: mm/dd/yyyy date picker</li>
+<li class=""><strong>Sender Bank</strong>: Dropdown selection</li>
+<li class=""><strong>Receiver Bank</strong>: Dropdown selection</li>
+<li class=""><strong>Sender Account</strong>: Text input field</li>
+<li class=""><strong>Receiver Account</strong>: Text input field</li>
+<li class=""><strong>Status</strong>: Radio buttons (All, Success, Failed)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions">Actions<a href="#actions" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Search</strong>: Execute search with applied filters (orange button)</li>
+<li class=""><strong>Reset</strong>: Clear all filters and reset to default</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="batch-payments">Batch Payments<a href="#batch-payments" class="hash-link" aria-label="Direct link to Batch Payments" title="Direct link to Batch Payments" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bulk-sending">Bulk Sending<a href="#bulk-sending" class="hash-link" aria-label="Direct link to Bulk Sending" title="Direct link to Bulk Sending" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Bulk Sending Interface" src="/ethswitch-docs/assets/images/EBP-BulkSending-382a41c3580291bedca614791d0058c0.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>The Bulk Sending feature allows users to upload and process batch payment files.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-3">Features<a href="#features-3" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>File Upload</strong>: Drag-and-drop or browse interface</li>
+<li class=""><strong>Batch Tracking</strong>: Unique ID for each batch</li>
+<li class=""><strong>Status Monitoring</strong>: Real-time processing status</li>
+<li class=""><strong>Success Tracking</strong>: Success and failure counts</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="payment-history-table">Payment History Table<a href="#payment-history-table" class="hash-link" aria-label="Direct link to Payment History Table" title="Direct link to Payment History Table" translate="no">​</a></h4>
+<table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody><tr><td><strong>Batch ID</strong></td><td>Unique identifier</td></tr><tr><td><strong>Type</strong></td><td>Payment type/category</td></tr><tr><td><strong>Date &amp; Time</strong></td><td>Upload timestamp</td></tr><tr><td><strong>File Name</strong></td><td>Original filename</td></tr><tr><td><strong>Records</strong></td><td>Total records in batch</td></tr><tr><td><strong>Status</strong></td><td>Pending, In Progress, Completed</td></tr><tr><td><strong>Success</strong></td><td>Successful transactions</td></tr><tr><td><strong>Failed</strong></td><td>Failed transactions</td></tr><tr><td><strong>Success Rate</strong></td><td>Success percentage</td></tr><tr><td><strong>Sender Bank</strong></td><td>Originating bank</td></tr><tr><td><strong>Receiver Bank</strong></td><td>Destination bank</td></tr><tr><td><strong>Actions</strong></td><td>View details, Download report</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="filter-options">Filter Options<a href="#filter-options" class="hash-link" aria-label="Direct link to Filter Options" title="Direct link to Filter Options" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Today</strong> dropdown (Today, Yesterday, Last 7 days, etc.)</li>
+<li class=""><strong>Status</strong> filter (All Status, Pending, In Progress, Completed)</li>
+<li class=""><strong>Search</strong> functionality</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="current-status">Current Status<a href="#current-status" class="hash-link" aria-label="Direct link to Current Status" title="Direct link to Current Status" translate="no">​</a></h4>
+<p>Currently: &quot;No batch payments found matching your criteria&quot;</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bulk-receiving">Bulk Receiving<a href="#bulk-receiving" class="hash-link" aria-label="Direct link to Bulk Receiving" title="Direct link to Bulk Receiving" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Bulk Receiving Interface" src="/ethswitch-docs/assets/images/EBP-BulkReceiving-fc0ac8dc107b0bc6aecbcab96fbfcff4.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Monitor and manage incoming bulk payments from other banks.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-4">Features<a href="#features-4" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h4>
+<ul>
+<li class="">View all received bulk payment batches</li>
+<li class="">Track processing status in real-time</li>
+<li class="">Monitor success and failure rates</li>
+<li class="">Download processing reports</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="bulk-receiving-payment-history">Bulk Receiving Payment History<a href="#bulk-receiving-payment-history" class="hash-link" aria-label="Direct link to Bulk Receiving Payment History" title="Direct link to Bulk Receiving Payment History" translate="no">​</a></h4>
+<table><thead><tr><th>Batch ID</th><th>Type</th><th>Date &amp; Time</th><th>File Name</th><th>Records</th><th>Status</th><th>Success</th><th>Failed</th><th>Success Rate</th><th>Sender Bank</th></tr></thead><tbody><tr><td>BR-20260130-009</td><td>Utility Collections</td><td>2026-01-30 12:06:03</td><td>Subscription_Payments_June2023.xlsx</td><td>510</td><td>Completed</td><td>505</td><td>5</td><td>99%</td><td>BUNAETAA</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="filtering-options">Filtering Options<a href="#filtering-options" class="hash-link" aria-label="Direct link to Filtering Options" title="Direct link to Filtering Options" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Today</strong> dropdown for date range</li>
+<li class=""><strong>All Status</strong> filter (All Status, Pending, In Progress, Completed)</li>
+<li class=""><strong>Search</strong> by batch ID or filename</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reports--analytics">Reports &amp; Analytics<a href="#reports--analytics" class="hash-link" aria-label="Direct link to Reports &amp; Analytics" title="Direct link to Reports &amp; Analytics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-report">Transaction Report<a href="#transaction-report" class="hash-link" aria-label="Direct link to Transaction Report" title="Direct link to Transaction Report" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Transaction Report Interface" src="/ethswitch-docs/assets/images/EBP-TransactionReport-ab675925abeb86244cff34933f2112b4.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Generate comprehensive transaction reports with customizable filters.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="report-filters">Report Filters<a href="#report-filters" class="hash-link" aria-label="Direct link to Report Filters" title="Direct link to Report Filters" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>From Date</strong>: mm/dd/yyyy</li>
+<li class=""><strong>To Date</strong>: mm/dd/yyyy</li>
+<li class=""><strong>Sender Bank</strong>: Dropdown selection</li>
+<li class=""><strong>Receiver Bank</strong>: Dropdown selection</li>
+<li class=""><strong>Sender Account</strong>: Text input</li>
+<li class=""><strong>Receiver Account</strong>: Text input</li>
+<li class=""><strong>Status</strong>: Radio buttons (All, Success, Failed)</li>
+<li class=""><strong>Transaction Type</strong>: Radio buttons (All, P2P, P2M)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions-1">Actions<a href="#actions-1" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Generate Report</strong>: Create report with applied filters (orange button)</li>
+<li class=""><strong>Reset</strong>: Clear all filters</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="export-formats">Export Formats<a href="#export-formats" class="hash-link" aria-label="Direct link to Export Formats" title="Direct link to Export Formats" translate="no">​</a></h4>
+<ul>
+<li class="">PDF (formatted report)</li>
+<li class="">Excel (XLSX with data tables)</li>
+<li class="">CSV (raw data export)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-summary-report">Transaction Summary Report<a href="#transaction-summary-report" class="hash-link" aria-label="Direct link to Transaction Summary Report" title="Direct link to Transaction Summary Report" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Transaction Summary Report Interface" src="/ethswitch-docs/assets/images/EBP-TransactionSummaryReport-c70653e34dfa0af77ec7fd5d4412b5f7.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Generate aggregate transaction statistics.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="configuration">Configuration<a href="#configuration" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>From Date</strong>: mm/dd/yyyy</li>
+<li class=""><strong>To Date</strong>: mm/dd/yyyy</li>
+<li class=""><strong>Transaction Type</strong>: Tabs (All Types, P2P, P2M)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary-data-includes">Summary Data Includes<a href="#summary-data-includes" class="hash-link" aria-label="Direct link to Summary Data Includes" title="Direct link to Summary Data Includes" translate="no">​</a></h4>
+<ul>
+<li class="">Total transaction count</li>
+<li class="">Total transaction value</li>
+<li class="">Average transaction value</li>
+<li class="">Success rate percentage</li>
+<li class="">Peak transaction periods</li>
+<li class="">Trend analysis</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions-2">Actions<a href="#actions-2" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Generate Summary</strong>: Create summary report (orange button)</li>
+<li class=""><strong>Reset</strong>: Clear date selections</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-list-report">User List Report<a href="#user-list-report" class="hash-link" aria-label="Direct link to User List Report" title="Direct link to User List Report" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="User List Report Interface" src="/ethswitch-docs/assets/images/EBP-UserListReport-45e7c319595078e0b225d437e3179074.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Generate reports on user accounts and activity.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="report-configuration">Report Configuration<a href="#report-configuration" class="hash-link" aria-label="Direct link to Report Configuration" title="Direct link to Report Configuration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Report Type</strong>: Dropdown<!-- -->
+<ul>
+<li class="">Users Created</li>
+<li class="">Active Users</li>
+<li class="">Inactive Users</li>
+<li class="">Locked Users</li>
+</ul>
+</li>
+<li class=""><strong>From Date</strong>: mm/dd/yyyy</li>
+<li class=""><strong>To Date</strong>: mm/dd/yyyy</li>
+<li class=""><strong>Role</strong>: Dropdown (All Roles, Administrator, Manager, Operator, Auditor)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions-3">Actions<a href="#actions-3" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Generate Report</strong>: Create report (orange button)</li>
+<li class=""><strong>Reset</strong>: Clear selections</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="report-contents">Report Contents<a href="#report-contents" class="hash-link" aria-label="Direct link to Report Contents" title="Direct link to Report Contents" translate="no">​</a></h4>
+<ul>
+<li class="">User name, email, phone</li>
+<li class="">Role assignments</li>
+<li class="">Account status</li>
+<li class="">Creation/modification dates</li>
+<li class="">Last login information</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-activity-audit-log">User Activity Audit Log<a href="#user-activity-audit-log" class="hash-link" aria-label="Direct link to User Activity Audit Log" title="Direct link to User Activity Audit Log" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="User Activity Audit Log Interface" src="/ethswitch-docs/assets/images/EBP-UserActivityAuditLog-9343948b8d0c59dae06f2b8d4745b4e0.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Track all user actions within the system.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="audit-filters">Audit Filters<a href="#audit-filters" class="hash-link" aria-label="Direct link to Audit Filters" title="Direct link to Audit Filters" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>From Date</strong>: mm/dd/yyyy date picker</li>
+<li class=""><strong>To Date</strong>: mm/dd/yyyy date picker</li>
+<li class=""><strong>User</strong>: Dropdown (All Users or specific user)</li>
+<li class=""><strong>Activity</strong>: Dropdown (All Activities or specific action type)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="tracked-activities">Tracked Activities<a href="#tracked-activities" class="hash-link" aria-label="Direct link to Tracked Activities" title="Direct link to Tracked Activities" translate="no">​</a></h4>
+<ul>
+<li class="">Login/Logout events</li>
+<li class="">User created/modified/deleted</li>
+<li class="">Role changed</li>
+<li class="">Transaction created/modified</li>
+<li class="">Report generated</li>
+<li class="">Configuration changed</li>
+<li class="">Batch uploaded/processed</li>
+<li class="">Password reset</li>
+<li class="">Account locked/unlocked</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions-4">Actions<a href="#actions-4" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Generate Report</strong>: Execute audit report (orange button)</li>
+<li class=""><strong>Reset</strong>: Clear all filters</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="audit-log-information">Audit Log Information<a href="#audit-log-information" class="hash-link" aria-label="Direct link to Audit Log Information" title="Direct link to Audit Log Information" translate="no">​</a></h4>
+<ul>
+<li class="">Timestamp</li>
+<li class="">Username</li>
+<li class="">Action performed</li>
+<li class="">Resource affected</li>
+<li class="">IP address</li>
+<li class="">Result (Success/Failed)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security--compliance">Security &amp; Compliance<a href="#security--compliance" class="hash-link" aria-label="Direct link to Security &amp; Compliance" title="Direct link to Security &amp; Compliance" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="api-audit-log">API Audit Log<a href="#api-audit-log" class="hash-link" aria-label="Direct link to API Audit Log" title="Direct link to API Audit Log" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="API Audit Log Interface" src="/ethswitch-docs/assets/images/EBP-APIAuditLog-2425790b6161be30cefedbc812d92558.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Comprehensive tracking of all API activity for security monitoring and compliance.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="api-audit-filters">API Audit Filters<a href="#api-audit-filters" class="hash-link" aria-label="Direct link to API Audit Filters" title="Direct link to API Audit Filters" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>From Date</strong>: mm/dd/yyyy date picker</li>
+<li class=""><strong>To Date</strong>: mm/dd/yyyy date picker</li>
+<li class=""><strong>API Method</strong>: Dropdown (All APIs, specific endpoints)</li>
+<li class=""><strong>Channel</strong>: Dropdown (All Channels, Web, Mobile, API)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions-5">Actions<a href="#actions-5" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Search</strong>: Execute search with filters (orange button)</li>
+<li class=""><strong>Reset</strong>: Clear all selections</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="logged-information">Logged Information<a href="#logged-information" class="hash-link" aria-label="Direct link to Logged Information" title="Direct link to Logged Information" translate="no">​</a></h4>
+<ul>
+<li class="">API endpoint accessed</li>
+<li class="">HTTP method (GET, POST, PUT, DELETE)</li>
+<li class="">Request timestamp</li>
+<li class="">Response status code</li>
+<li class="">Response time (milliseconds)</li>
+<li class="">User/client identifier</li>
+<li class="">Request parameters</li>
+<li class="">IP address</li>
+<li class="">User agent string</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="use-cases">Use Cases<a href="#use-cases" class="hash-link" aria-label="Direct link to Use Cases" title="Direct link to Use Cases" translate="no">​</a></h4>
+<ul>
+<li class="">Security auditing and threat detection</li>
+<li class="">Compliance reporting</li>
+<li class="">Performance monitoring</li>
+<li class="">Troubleshooting API issues</li>
+<li class="">Usage analytics</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="certificate-management">Certificate Management<a href="#certificate-management" class="hash-link" aria-label="Direct link to Certificate Management" title="Direct link to Certificate Management" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Certificate Management Interface" src="/ethswitch-docs/assets/images/EBP-CertificateManagement-bdf95c45f673937f7a91feb16e42bcf4.png" width="1920" height="1180" class="img_ev3q"></p>
+<p>Manage SSL/TLS certificates for secure communication between system participants.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-5">Features<a href="#features-5" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Add Certificate</strong>: &quot;+ Add Certificate&quot; button (blue)</li>
+<li class=""><strong>Search</strong>: Search certificates by participant name, BIC, or serial</li>
+<li class=""><strong>Filter</strong>: Filter certificate list</li>
+<li class=""><strong>Reset</strong>: Clear filters</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="certificate-list-table">Certificate List Table<a href="#certificate-list-table" class="hash-link" aria-label="Direct link to Certificate List Table" title="Direct link to Certificate List Table" translate="no">​</a></h4>
+<table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody><tr><td><strong>Participant</strong></td><td>Bank/Institution name</td></tr><tr><td><strong>BIC</strong></td><td>Banking Identification Code</td></tr><tr><td><strong>Status</strong></td><td>Active, Inactive, Expired, Revoked</td></tr><tr><td><strong>Valid From</strong></td><td>Certificate start date</td></tr><tr><td><strong>Valid To</strong></td><td>Certificate expiration date</td></tr><tr><td><strong>Serial No</strong></td><td>Unique certificate serial number</td></tr><tr><td><strong>Last Updated</strong></td><td>Modification timestamp</td></tr><tr><td><strong>Actions</strong></td><td>Modify, Deactivate, Download</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sample-certificates">Sample Certificates<a href="#sample-certificates" class="hash-link" aria-label="Direct link to Sample Certificates" title="Direct link to Sample Certificates" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="ethswitch">EthSwitch<a href="#ethswitch" class="hash-link" aria-label="Direct link to EthSwitch" title="Direct link to EthSwitch" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>BIC</strong>: ETSWETAA</li>
+<li class=""><strong>Status</strong>: Active (green checkmark)</li>
+<li class=""><strong>Valid From</strong>: 2023-01-15</li>
+<li class=""><strong>Valid To</strong>: 2024-01-15</li>
+<li class=""><strong>Serial No</strong>: 12:AB:CD:34:FF:56</li>
+<li class=""><strong>Last Updated</strong>: 2023-01-15 09:30:45</li>
+<li class=""><strong>Actions</strong>: Modify, Deactivate, Download</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="amhara-bank">Amhara Bank<a href="#amhara-bank" class="hash-link" aria-label="Direct link to Amhara Bank" title="Direct link to Amhara Bank" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>BIC</strong>: AMHRETAA</li>
+<li class=""><strong>Status</strong>: Active (green checkmark)</li>
+<li class=""><strong>Valid From</strong>: 2023-10-15</li>
+<li class=""><strong>Valid To</strong>: 2024-10-15</li>
+<li class=""><strong>Serial No</strong>: 78:9A:BC:DF:F0:12</li>
+<li class=""><strong>Last Updated</strong>: 2023-10-15 08:55:30</li>
+<li class=""><strong>Actions</strong>: Modify, Deactivate, Download</li>
+</ul>
+<p><strong>Pagination</strong>: Showing 1 to 2 of 2 certificates</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="certificate-management-features">Certificate Management Features<a href="#certificate-management-features" class="hash-link" aria-label="Direct link to Certificate Management Features" title="Direct link to Certificate Management Features" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Modify</strong>: Update certificate details</li>
+<li class=""><strong>Deactivate</strong>: Disable certificate without deletion</li>
+<li class=""><strong>Download</strong>: Download certificate file</li>
+<li class=""><strong>Automatic Alerts</strong>: Expiration notifications (30, 7, 1 days)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="configurations">Configurations<a href="#configurations" class="hash-link" aria-label="Direct link to Configurations" title="Direct link to Configurations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-settings">System Settings<a href="#system-settings" class="hash-link" aria-label="Direct link to System Settings" title="Direct link to System Settings" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="System Configurations Interface" src="/ethswitch-docs/assets/images/EBP-Configurations-affa66ef72f43df6d938cadbd3d62fb3.png" width="1920" height="1402" class="img_ev3q"></p>
+<p>Manage system-wide configuration for security, timeouts, and authentication.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-timeouts">System Timeouts<a href="#system-timeouts" class="hash-link" aria-label="Direct link to System Timeouts" title="Direct link to System Timeouts" translate="no">​</a></h4>
+<p><strong>Read Time Out</strong></p>
+<ul>
+<li class=""><strong>Value</strong>: 30 seconds</li>
+<li class=""><strong>Unit</strong>: Seconds (dropdown selector)</li>
+<li class=""><strong>Description</strong>: Maximum time allowed for API read operations</li>
+<li class=""><strong>Range</strong>: 10-120 seconds</li>
+</ul>
+<p><strong>Idle Time Out</strong></p>
+<ul>
+<li class=""><strong>Value</strong>: 15 minutes</li>
+<li class=""><strong>Unit</strong>: Minutes (dropdown selector)</li>
+<li class=""><strong>Description</strong>: Time before inactive users are automatically logged out</li>
+<li class=""><strong>Range</strong>: 5-60 minutes</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-settings">Security Settings<a href="#security-settings" class="hash-link" aria-label="Direct link to Security Settings" title="Direct link to Security Settings" translate="no">​</a></h4>
+<p><strong>Invalid Password Attempts</strong></p>
+<ul>
+<li class=""><strong>Value</strong>: 3 attempts</li>
+<li class=""><strong>Description</strong>: Number of failed attempts before account lockout (1-10)</li>
+<li class=""><strong>Range</strong>: 1-10 attempts</li>
+<li class=""><strong>Lockout Duration</strong>: 15 minutes (configurable)</li>
+</ul>
+<p><strong>Password Expires After (Days)</strong></p>
+<ul>
+<li class=""><strong>Value</strong>: 90 days</li>
+<li class=""><strong>Description</strong>: Days until users must change their password (90-365 days)</li>
+<li class=""><strong>Range</strong>: 90-365 days</li>
+<li class=""><strong>Password History</strong>: Last 5 passwords cannot be reused</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="authentication">Authentication<a href="#authentication" class="hash-link" aria-label="Direct link to Authentication" title="Direct link to Authentication" translate="no">​</a></h4>
+<p><strong>Enable Two-Factor Authentication (2FA) for All Users</strong></p>
+<ul>
+<li class=""><strong>Options</strong>: Yes (radio button), No (radio button)</li>
+<li class=""><strong>Current Setting</strong>: No (selected)</li>
+<li class=""><strong>Description</strong>: When enabled, all users will be required to set up two-factor authentication during their next login</li>
+<li class=""><strong>Method</strong>: TOTP (Time-based One-Time Password)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="configuration-actions">Configuration Actions<a href="#configuration-actions" class="hash-link" aria-label="Direct link to Configuration Actions" title="Direct link to Configuration Actions" translate="no">​</a></h4>
+<p><strong>Save Configuration</strong></p>
+<ul>
+<li class=""><strong>Button</strong>: &quot;Save Configuration&quot; (orange button)</li>
+<li class=""><strong>Function</strong>: Apply all configuration changes</li>
+<li class=""><strong>Confirmation</strong>: Displays confirmation message on successful save</li>
+<li class=""><strong>Validation</strong>: Validates settings before applying changes</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="configuration-impact">Configuration Impact<a href="#configuration-impact" class="hash-link" aria-label="Direct link to Configuration Impact" title="Direct link to Configuration Impact" translate="no">​</a></h4>
+<ul>
+<li class="">Changes apply immediately after saving</li>
+<li class="">Users currently logged in remain active until next session</li>
+<li class="">New security settings enforce on next login</li>
+<li class="">Changes are logged in audit trail</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="navigation-menu">Navigation Menu<a href="#navigation-menu" class="hash-link" aria-label="Direct link to Navigation Menu" title="Direct link to Navigation Menu" translate="no">​</a></h2>
+<p>The left sidebar provides easy navigation to all back office features:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="main-navigation-items">Main Navigation Items<a href="#main-navigation-items" class="hash-link" aria-label="Direct link to Main Navigation Items" title="Direct link to Main Navigation Items" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Dashboard</strong>: Overview of banking operations</li>
+<li class=""><strong>User Management</strong>: Manage system users<!-- -->
+<ul>
+<li class="">Role Management</li>
+<li class="">User Management</li>
+</ul>
+</li>
+<li class=""><strong>Transaction Services</strong>: Handle transactions<!-- -->
+<ul>
+<li class="">Transaction Monitoring</li>
+<li class="">Transaction Search</li>
+</ul>
+</li>
+<li class=""><strong>Batch Payments</strong>: Manage batch processing<!-- -->
+<ul>
+<li class="">Bulk Sending</li>
+<li class="">Bulk Receiving</li>
+</ul>
+</li>
+<li class=""><strong>Reports &amp; Analytics</strong>: Generate reports<!-- -->
+<ul>
+<li class="">Transaction Report</li>
+<li class="">Transaction Summary</li>
+<li class="">Users List</li>
+<li class="">User Activity Audit</li>
+</ul>
+</li>
+<li class=""><strong>Security &amp; Compliance</strong>: Security features<!-- -->
+<ul>
+<li class="">Audit Log</li>
+<li class="">Certificate Management</li>
+</ul>
+</li>
+<li class=""><strong>Configurations</strong>: System settings</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="contact--support">Contact &amp; Support<a href="#contact--support" class="hash-link" aria-label="Direct link to Contact &amp; Support" title="Direct link to Contact &amp; Support" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-information">Support Information<a href="#support-information" class="hash-link" aria-label="Direct link to Support Information" title="Direct link to Support Information" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Email</strong>: <a href="mailto:support@paysyslabs.com" target="_blank" rel="noopener noreferrer" class="">support@paysyslabs.com</a></li>
+<li class=""><strong>Phone</strong>: +92-313-2370605</li>
+<li class=""><strong>Website</strong>: <a href="http://www.paysyslabs.com" target="_blank" rel="noopener noreferrer" class="">www.paysyslabs.com</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="operating-hours">Operating Hours<a href="#operating-hours" class="hash-link" aria-label="Direct link to Operating Hours" title="Direct link to Operating Hours" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>24/7 Support</strong>: Round-the-clock technical support available</li>
+<li class=""><strong>Response Time</strong>: Critical issues within 1 hour</li>
+<li class=""><strong>SLA</strong>: 99.9% uptime guarantee</li>
+</ul>
+<hr>
+<p>© 2026 EthBridge Bank Portal by PaysYs Labs. All rights reserved.<br>
+<!-- -->Made with ❤️ in Ethiopia</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/paysyslab/ethswitch-docs/tree/main/docs/BankPortal-Backoffice.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ethswitch-docs/test-p2p-outward-ethswitch"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">P2P Outward Transaction Test Scenarios</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#table-of-contents" class="table-of-contents__link toc-highlight">Table of Contents</a></li><li><a href="#dashboard" class="table-of-contents__link toc-highlight">Dashboard</a><ul><li><a href="#overview-1" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#dashboard-data" class="table-of-contents__link toc-highlight">Dashboard Data</a></li><li><a href="#key-metrics" class="table-of-contents__link toc-highlight">Key Metrics</a></li><li><a href="#analytics-visualizations" class="table-of-contents__link toc-highlight">Analytics Visualizations</a></li><li><a href="#recent-transactions-table" class="table-of-contents__link toc-highlight">Recent Transactions Table</a></li></ul></li><li><a href="#user-management" class="table-of-contents__link toc-highlight">User Management</a><ul><li><a href="#overview-2" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li><li><a href="#sample-users" class="table-of-contents__link toc-highlight">Sample Users</a></li><li><a href="#user-status-indicators" class="table-of-contents__link toc-highlight">User Status Indicators</a></li></ul></li><li><a href="#role-management" class="table-of-contents__link toc-highlight">Role Management</a><ul><li><a href="#overview-3" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#features-1" class="table-of-contents__link toc-highlight">Features</a></li><li><a href="#pre-defined-roles" class="table-of-contents__link toc-highlight">Pre-defined Roles</a></li><li><a href="#permission-types" class="table-of-contents__link toc-highlight">Permission Types</a></li></ul></li><li><a href="#transaction-services" class="table-of-contents__link toc-highlight">Transaction Services</a><ul><li><a href="#transaction-monitoring" class="table-of-contents__link toc-highlight">Transaction Monitoring</a></li><li><a href="#transaction-search" class="table-of-contents__link toc-highlight">Transaction Search</a></li></ul></li><li><a href="#batch-payments" class="table-of-contents__link toc-highlight">Batch Payments</a><ul><li><a href="#bulk-sending" class="table-of-contents__link toc-highlight">Bulk Sending</a></li><li><a href="#bulk-receiving" class="table-of-contents__link toc-highlight">Bulk Receiving</a></li></ul></li><li><a href="#reports--analytics" class="table-of-contents__link toc-highlight">Reports &amp; Analytics</a><ul><li><a href="#transaction-report" class="table-of-contents__link toc-highlight">Transaction Report</a></li><li><a href="#transaction-summary-report" class="table-of-contents__link toc-highlight">Transaction Summary Report</a></li><li><a href="#user-list-report" class="table-of-contents__link toc-highlight">User List Report</a></li><li><a href="#user-activity-audit-log" class="table-of-contents__link toc-highlight">User Activity Audit Log</a></li></ul></li><li><a href="#security--compliance" class="table-of-contents__link toc-highlight">Security &amp; Compliance</a><ul><li><a href="#api-audit-log" class="table-of-contents__link toc-highlight">API Audit Log</a></li><li><a href="#certificate-management" class="table-of-contents__link toc-highlight">Certificate Management</a></li></ul></li><li><a href="#configurations" class="table-of-contents__link toc-highlight">Configurations</a><ul><li><a href="#system-settings" class="table-of-contents__link toc-highlight">System Settings</a></li></ul></li><li><a href="#navigation-menu" class="table-of-contents__link toc-highlight">Navigation Menu</a><ul><li><a href="#main-navigation-items" class="table-of-contents__link toc-highlight">Main Navigation Items</a></li></ul></li><li><a href="#contact--support" class="table-of-contents__link toc-highlight">Contact &amp; Support</a><ul><li><a href="#support-information" class="table-of-contents__link toc-highlight">Support Information</a></li><li><a href="#operating-hours" class="table-of-contents__link toc-highlight">Operating Hours</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/intro-ethswitch">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/api-specifications">API Specification</a></li><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/backoffice-ethswitch">Back Office</a></li><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/BankPortal-Backoffice">Bank Portal</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">API</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ethswitch-docs/api-specifications">API Reference (OpenAPI)</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Legal</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://paysyslabs.com/privacy" target="_blank" rel="noopener noreferrer" class="footer__link-item">Privacy Policy<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://paysyslabs.com/terms" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms of Service<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Paysys Labs. All rights reserved.</div></div></div></footer></div>
+</body>
+</html>

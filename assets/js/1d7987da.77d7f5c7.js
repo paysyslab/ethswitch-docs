@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkethswitch_docs=globalThis.webpackChunkethswitch_docs||[]).push([[838],{2204(s){s.exports=JSON.parse('{"name":"@scalar/docusaurus","id":"ethswitch"}')}}]);
