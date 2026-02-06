@@ -3,11 +3,11 @@
   align-items: center;
   padding: 4rem 0;
   width: 100%;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #F27421 0%, #E86A1A 50%, #D85A10 100%);
 }
 
 [data-theme='dark'] .features {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+  background: linear-gradient(135deg, #F27421 0%, #E86A1A 100%);
 }
 
 .featureIcon {
@@ -18,10 +18,10 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000000;
   border-radius: 50%;
   color: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -32,4 +32,13 @@
 .featureSvg {
   height: 100px;
   width: 300px;
+}
+
+.features h3 {
+  color: #000000;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .features h3 {
+  color: #ffffff;
 }

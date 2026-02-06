@@ -89,8 +89,8 @@ const config = {
 
     navbar: {
       logo: {
-        alt: 'Paysys Labs Logo',
-        src: 'img/PaysysLogo.png',
+        alt: 'ETHSwitch Logo',
+        src: 'img/eslogo.png',
         href: '/',
       },
       items: [
